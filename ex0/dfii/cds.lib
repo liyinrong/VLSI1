@@ -1,0 +1,10 @@
+SOFTINCLUDE $IUSHOME/tools/inca/files/cds.lib
+DEFINE US_8ths $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib 
+DEFINE avTech $ASSURAHOME/tools/assura/etc/avtech/avTech
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic 
+DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib 
+DEFINE imec    /usr/pack/umc-65-kgf/dz/dfii/610/imec
+DEFINE u065gioll25mvir_b04 /usr/pack/umc-65-kgf/umc/ll/u065gioll25mvir/b04/dfii.dz/610/u065gioll25mvir_b04
+DEFINE uk65lscllmvbbl_b03 /usr/pack/umc-65-kgf/umc/ll/uk65lscllmvbbl/b03/dfii.dz/610/uk65lscllmvbbl_b03
+DEFINE umc65ll /usr/pack/umc-65-kgf/umc/ll/tech/Designkits/Cadence_6.1/B11_PB/umc65ll

@@ -1,0 +1,67 @@
+! 6-oct-02, braendli
+ 
+! ***************************************************
+! * default position of the CIW, LSW and LibManager *
+! ***************************************************
+ 
+!Opus.geometry:                  725x500+0-0
+!Opus.LSWGeometry:               120x850+0+0
+!cdsLibManager.geometry:         725x500+130+20
+
+! *** alternative way to specify Opus.geometry or only
+! *** part of it 
+!Opus.x:             !!!(screen_width - Opus.width)/2
+!Opus.y:             0
+!Opus.width:         725
+!Opus.height:        130
+
+! ******************************************************************
+! * These resources allow you to specify the default               *
+! * positions for forms.                                           *
+! *                                                                * 
+! * possible settings are:                                         *
+! *                                                                * 
+! * Opus.formPlacement:        one of top,bottom,left,right,center *
+! * Opus.formRelativeTo:       one of screen,currentWindow,CIW     *
+! * Opus.optionFormPlacement:  one of top,bottom,left,right,center *
+! * Opus.optionFormRelativeTo: one of screen,currentWindow,CIW     *
+! ******************************************************************
+
+!Opus.formPlacement:             bottom
+!Opus.formRelativeTo:            currentWindow
+!Opus.optionFormPlacement:       bottom
+!Opus.optionFormRelativeTo:      currentWindow
+
+! **********************************************
+! * These resources allow you to set the fonts *
+! **********************************************
+
+!Opus.labelFont:     -*-helvetica-bold-r-*-*-12-*
+!Opus.textFont:      -*-courier-medium-r-*-*-12-*
+
+! ****************************************************
+! * This resource lets you specify which text editor *
+! * you want to use.                                 *
+! ****************************************************
+
+!Opus.textEditor:
+
+! **************************************
+! * This resource lets you set the     *
+! * colors used by the user interface. *
+! **************************************
+
+!Opus.foreground:               #800000
+!Opus.background:               #e0e0e0
+!Opus.borderColor:              #0000c0
+!Opus.recessColor:              #bfbfbf
+!Opus.activeBannerColor:        #bdcccc
+!Opus.inactiveBannerColor:      #cccccc
+!Opus.textColor:                #333333
+!Opus.attentionTextColor:       #333333
+!Opus.flashColor:               #ff00ff
+!Opus.topShadowColor:           #ffffff
+!Opus.bottomShadowColor:        #999999
+!Opus.buttonColor:              #800000
+!Opus.editorBackground:         #000000
+

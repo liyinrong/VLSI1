@@ -1,0 +1,1352 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x36C179F0AE0DEC6B" bd:device="xc7z020clg400-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2017.2" bd:top="zybo_top" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>zybo_top</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>hdmi_rx_ddc</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="iic" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="iic_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK_I</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk_i</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>125000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>zybo_top_clk_i</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="zybo_top_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>switch_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>btn_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>led_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rx_p_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rx_clk_p_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rx_n_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rx_clk_n_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rx_hpd_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_tx_clk_n_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_tx_n_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_tx_p_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_tx_clk_p_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>zybo_top_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>hdmi_rx</spirit:instanceName>
+        <spirit:componentRef spirit:library="BlockDiagram/zybo_top_imp" spirit:name="hdmi_rx" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>hdmi_tx</spirit:instanceName>
+        <spirit:componentRef spirit:library="BlockDiagram/zybo_top_imp" spirit:name="hdmi_tx" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>concat_led</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_xlconcat_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN1_WIDTH">2</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>constant_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_xlconstant_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>rgb_proc_wrap_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="rgb_proc_wrap" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_rgb_proc_wrap_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">rgb_proc_wrap</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_enable</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_xlslice_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_switch</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_xlslice_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections/>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>clk_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="clk_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_p_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_rx_p_i"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hdmi_p_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_clk_p_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_rx_clk_p_i"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hdmi_clk_p_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_n_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_rx_n_i"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hdmi_n_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_clk_n_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_rx_clk_n_i"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hdmi_clk_n_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_rst_no</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="rst_no"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_rx_hpd_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="rst_ni"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_tx_hdmi_clk_n_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hdmi_clk_n_o"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_tx_clk_n_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_tx_hdmi_n_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hdmi_n_o"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_tx_n_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_tx_hdmi_p_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hdmi_p_o"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_tx_p_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_tx_hdmi_clk_p_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hdmi_clk_p_o"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_tx_clk_p_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>proc_clk_i_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="proc_clk_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="proc_clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="clk_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_i_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hdmi_clk_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hdmi_clk_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rst_ni_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hdmi_rst_no"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hdmi_rst_ni"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_rst_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="rst_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="rst_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_tx_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="full"/>
+        <spirit:internalPortReference spirit:componentRef="concat_led" spirit:portRef="In0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="full"/>
+        <spirit:internalPortReference spirit:componentRef="concat_led" spirit:portRef="In2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="constant_0" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="concat_led" spirit:portRef="In1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_r_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="r_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="r_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_g_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="g_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="g_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_b_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="b_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="b_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_vsync_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="vsync_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="vsync_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_hsync_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="hsync_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="hsync_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_vde_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="vde_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="vde_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rx_valid_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="valid_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="valid_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb_proc_wrap_0_ready_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="ready_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_rx" spirit:portRef="ready_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_tx_ready_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="ready_o"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="ready_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>r_i_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="r_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="r_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb_proc_wrap_0_g_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="g_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="g_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>b_i_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="b_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="b_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb_proc_wrap_0_hsync_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="hsync_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="hsync_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vsync_i_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="vsync_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="vsync_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb_proc_wrap_0_vde_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="vde_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="vde_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>valid_i_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="valid_o"/>
+        <spirit:internalPortReference spirit:componentRef="hdmi_tx" spirit:portRef="valid_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>switch_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="switch_i"/>
+        <spirit:internalPortReference spirit:componentRef="slice_enable" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_switch" spirit:portRef="Din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_enable_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_enable" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="enable_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_switch_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_switch" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="rgb_proc_wrap_0" spirit:portRef="switch_i"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>concat_led_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="concat_led" spirit:portRef="dout"/>
+        <spirit:externalPortReference spirit:portRef="led_o"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+    <spirit:hierConnections>
+      <spirit:hierConnection spirit:interfaceRef="hdmi_rx_ddc/hdmi_rx_ddc1">
+        <spirit:activeInterface spirit:busRef="ddc" spirit:componentRef="hdmi_rx"/>
+      </spirit:hierConnection>
+    </spirit:hierConnections>
+  </spirit:design>
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram/zybo_top_imp</spirit:library>
+    <spirit:name>hdmi_tx</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram/zybo_top_imp" spirit:name="hdmi_tx_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>rst_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>proc_clk_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rst_ni</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>r_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>g_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>b_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vsync_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hsync_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vde_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>valid_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>ready_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_n_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_n_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_p_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_p_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>full</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram/zybo_top_imp</spirit:library>
+    <spirit:name>hdmi_tx_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>rgb2dvi</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="rgb2dvi" spirit:vendor="digilentinc.com" spirit:version="1.4"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_rgb2dvi_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kRstActiveHigh">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkPrimitive">MMCM</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>concat</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_concat_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN0_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN1_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN2_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_vde</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_slice_vde_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">26</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">26</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_hsync</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_slice_hsync_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_vsync</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_slice_vsync_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">24</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">24</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_r</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_slice_r_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">23</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_g</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_slice_g_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_b</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_slice_b_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">7</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>concat_rgb</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_concat_rgb_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN0_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN1_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN2_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>tx_dc_fifo</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fifo_generator" spirit:vendor="xilinx.com" spirit:version="13.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_fifo_generator_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Fifo_Implementation">Independent_Clocks_Builtin_FIFO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Data_Width">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Depth">512</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Read_Clock_Frequency">100</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Clock_Frequency">150</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>not_full</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="util_vector_logic" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_util_vector_logic_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SIZE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_OPERATION">not</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_rst_ni_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_rst_ni"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="aRst_n"/>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="rd_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="PixelClk"/>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="rd_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>b_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="b_i"/>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="In0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>g_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="g_i"/>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="In1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>r_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="r_i"/>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="In2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vde_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="vde_i"/>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="In5"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hsync_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hsync_i"/>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="In4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vsync_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="vsync_i"/>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="In3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_r_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_r" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_g_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_g" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_b_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_b" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>concat_rgb_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="vid_pData"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_hsync_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_hsync" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="vid_pHSync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_vsync_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_vsync" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="vid_pVSync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>slice_vde_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_vde" spirit:portRef="Dout"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="vid_pVDE"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_TMDS_Clk_p</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="TMDS_Clk_p"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_p_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_TMDS_Clk_n</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="TMDS_Clk_n"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_n_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_TMDS_Data_p</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="TMDS_Data_p"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_p_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_TMDS_Data_n</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi" spirit:portRef="TMDS_Data_n"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_n_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>concat_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="concat" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>tx_dc_fifo_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="slice_b" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_g" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_r" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_hsync" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_vsync" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_vde" spirit:portRef="Din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rst_i"/>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>proc_clk_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="proc_clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="wr_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>valid_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="valid_i"/>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="wr_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>tx_dc_fifo_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="tx_dc_fifo" spirit:portRef="full"/>
+        <spirit:internalPortReference spirit:componentRef="not_full" spirit:portRef="Op1"/>
+        <spirit:externalPortReference spirit:portRef="full"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>not_full_Res</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="not_full" spirit:portRef="Res"/>
+        <spirit:externalPortReference spirit:portRef="ready_o"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram/zybo_top_imp</spirit:library>
+    <spirit:name>hdmi_rx</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>ddc</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="iic" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="iic_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram/zybo_top_imp" spirit:name="hdmi_rx_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>clk_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_p_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_p_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_n_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_n_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>ready_i</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>proc_clk_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_rst_no</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>valid_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rst_no</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>r_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>g_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>b_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vsync_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hsync_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vde_o</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>0</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>full</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram/zybo_top_imp</spirit:library>
+    <spirit:name>hdmi_rx_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>clk_gen</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.4"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_clk_gen_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PRIMITIVE">PLL</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PRIM_IN_FREQ">125</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKIN1_JITTER_PS">80.0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">200.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">150.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="FEEDBACK_SOURCE">FDBK_AUTO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="USE_RESET">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">48</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN1_PERIOD">8.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN2_PERIOD">10.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_COMPENSATION">ZHOLD</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">161.296</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">222.305</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">168.006</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">222.305</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>rst_gen</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="rst_gen_wrap" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_rst_gen_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">rst_gen_wrap</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>dvi2rgb</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.9"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_dvi2rgb_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kRstActiveHigh">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkRange">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kEdidFileName">dgl_1080p_cea.data</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>concat_rgb</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_xlconcat_0_5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN0_WIDTH">24</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_r</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_xlslice_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">23</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_hsync</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_data_slice_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">25</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_vsync</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_data_slice_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">24</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">24</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_vde</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_data_slice_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">26</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">26</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_g</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_r_slice_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>slice_b</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_r_slice_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_TO">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">7</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DIN_WIDTH">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">8</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>rx_dc_fifo</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fifo_generator" spirit:vendor="xilinx.com" spirit:version="13.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_fifo_generator_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Fifo_Implementation">Independent_Clocks_Builtin_FIFO</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Data_Width">27</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Depth">512</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Read_Clock_Frequency">150</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Clock_Frequency">100</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>not_empty</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="util_vector_logic" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_top_util_vector_logic_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SIZE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_OPERATION">not</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections/>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>clk_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="clk_gen" spirit:portRef="clk_in1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_gen_clk_out2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_gen" spirit:portRef="clk_out2"/>
+        <spirit:externalPortReference spirit:portRef="proc_clk_o"/>
+        <spirit:internalPortReference spirit:componentRef="rst_gen" spirit:portRef="clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="rd_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_gen_locked</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_gen" spirit:portRef="locked"/>
+        <spirit:internalPortReference spirit:componentRef="rst_gen" spirit:portRef="rst_ni"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_gen_clk_out1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_gen" spirit:portRef="clk_out1"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="RefClk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_gen_rst_no</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rst_gen" spirit:portRef="rst_no"/>
+        <spirit:externalPortReference spirit:portRef="rst_no"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="aRst_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_p_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_p_i"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="TMDS_Data_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_p_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_p_i"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="TMDS_Clk_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_n_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_n_i"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="TMDS_Data_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_n_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_n_i"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="TMDS_Clk_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_gen_rst_o</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rst_gen" spirit:portRef="rst_o"/>
+        <spirit:externalPortReference spirit:portRef="rst_o"/>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_vid_pData</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="vid_pData"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_vid_pVDE</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="vid_pVDE"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_vid_pHSync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="vid_pHSync"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_vid_pVSync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="vid_pVSync"/>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="In1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vde_slice_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_vde" spirit:portRef="Dout"/>
+        <spirit:externalPortReference spirit:portRef="vde_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hsync_slice_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_hsync" spirit:portRef="Dout"/>
+        <spirit:externalPortReference spirit:portRef="hsync_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>r_slice_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_r" spirit:portRef="Dout"/>
+        <spirit:externalPortReference spirit:portRef="r_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>g_slice_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_g" spirit:portRef="Dout"/>
+        <spirit:externalPortReference spirit:portRef="g_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>b_slice_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_b" spirit:portRef="Dout"/>
+        <spirit:externalPortReference spirit:portRef="b_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vsync_slice_Dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="slice_vsync" spirit:portRef="Dout"/>
+        <spirit:externalPortReference spirit:portRef="vsync_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_PixelClk</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="PixelClk"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_o"/>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="wr_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_aPixelClkLckd</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb" spirit:portRef="aPixelClkLckd"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_rst_no"/>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="wr_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>concat_rgb_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="concat_rgb" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rx_dc_fifo_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="slice_b" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_g" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_hsync" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_r" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_vde" spirit:portRef="Din"/>
+        <spirit:internalPortReference spirit:componentRef="slice_vsync" spirit:portRef="Din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ready_i_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="ready_i"/>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="rd_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rx_dc_fifo_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="empty"/>
+        <spirit:internalPortReference spirit:componentRef="not_empty" spirit:portRef="Op1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>not_empty_Res</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="not_empty" spirit:portRef="Res"/>
+        <spirit:externalPortReference spirit:portRef="valid_o"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rx_dc_fifo_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rx_dc_fifo" spirit:portRef="full"/>
+        <spirit:externalPortReference spirit:portRef="full"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+    <spirit:hierConnections>
+      <spirit:hierConnection spirit:interfaceRef="ddc/dvi2rgb_DDC">
+        <spirit:activeInterface spirit:busRef="DDC" spirit:componentRef="dvi2rgb"/>
+      </spirit:hierConnection>
+    </spirit:hierConnections>
+  </spirit:design>
+
+</bd:repository>

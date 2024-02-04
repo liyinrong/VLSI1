@@ -1,0 +1,4 @@
+../sourcecode/traffic_ctrl_good.sv
+../sourcecode/traffic_ctrl_bad.sv
+../sourcecode/rgb_grayscaler.sv
+../sourcecode/fsm_counter.sv

@@ -1,0 +1,19 @@
+#userOutputFolderPath = userOutput
+userOutputFolderPath = .
+templateFolderPath = /usr/pack/umc-65-kgf/dz/ordinator/bdiagrams 
+defaultTemplate = qfn40_umc65-ninth1 
+editModeEnabled = false
+vccCoreColor = #FF4040
+vccPadColor = #FF8080
+gndCoreColor = #4040FF
+gndPadColor = #8080FF
+dataPadColor = #DCDCDC
+packagePinColor = #FFD700
+connectionColor = #191970
+gpConnectionColor = #191970
+groundPlaneColor = #FFFACD
+
+
+
+
+

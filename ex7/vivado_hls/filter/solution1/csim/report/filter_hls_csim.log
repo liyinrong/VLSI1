@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../cpp/filter_app.cpp in debug mode
+   Compiling ../../../../../cpp/filter_hls.cpp in debug mode
+   Generating csim.exe
+Loaded 2073600 pixels from ../../../../../simvectors/stim.ppm
+Starting filter
+Filter terminated
+Stored 2073600 pixels to ../../actual.ppm
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

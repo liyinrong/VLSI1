@@ -1,0 +1,36 @@
+#! /bin/csh -f
+
+# to set some environment variables 
+# kgf - Fri Jun 26 17:00:24 MEST 2009
+
+# v0.1 - <kgf@ee.ethz.ch> - Mon Jun 20 13:14:22 CEST 2011
+# modified for umc65ll
+
+# Calibre default runsets
+setenv MGC_CALIBRE_DRC_RUNSET_FILE "../calibre/drc/runset.drc"
+setenv MGC_CALIBRE_LVS_RUNSET_FILE "../calibre/lvs/runset.lvs"
+setenv MGC_CALIBRE_PEX_RUNSET_FILE "../calibre/pex/runset.pex"
+
+## Determine the tool to startup 
+switch ($1)
+  case 2010.2
+     set CALIBRE = "calibre-2010.2 calibredrv -dl .init/L65.layerprops"
+     breaksw
+  case 2011.2
+     set CALIBRE = "calibre-2011.2 calibredrv -dl .init/L65.layerprops"
+     breaksw
+  case 2013.3
+     set CALIBRE = "calibre-2013.3 calibredrv -dl .init/L65.layerprops"
+     breaksw
+  case 2014.3
+     set CALIBRE = "calibre-2014.3 calibredrv -dl .init/L65.layerprops"
+     breaksw
+## this is the command that runs as default, it can be adjusted to whatever you
+## please
+default:
+     set CALIBRE = "calibre-2014.3 calibredrv -dl .init/L65.layerprops"
+     breaksw
+endsw  
+
+##echo "Starting $CALIBRE"
+$CALIBRE

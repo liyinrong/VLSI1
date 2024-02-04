@@ -1,0 +1,7 @@
+../sourcecode/debouncer.sv
+../sourcecode_hls/filter_hls.v
+../sourcecode_hls/filter_hls_lines_bkb.v
+../sourcecode/stream_fork.sv
+../sourcecode/stream_filter.sv
+../sourcecode/fifo_v3.sv
+../sourcecode/rgb_proc.sv

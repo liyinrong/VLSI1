@@ -1,0 +1,106 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2019.3 linux_x86_64 Jul 24 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# set TB_DUT tb_simpler_fsm
+# tb_simpler_fsm
+#  set SOLCOMMAND NONE
+# NONE
+#  source scripts/compile_n_runsim.tcl
+# ON
+# OFF
+# work
+# nodesign
+# lib exist
+# 0
+# QuestaSim-64 vlog 2019.3 Compiler 2019.07 Jul 24 2019
+# Start time: 17:47:27 on Jan 26,2024
+# vlog -reportprogress 300 -sv -pedanticerrors -cover 0 -work work -f ../sourcecode/file.list 
+# -- Compiling module stage
+# -- Compiling module stage5
+# -- Compiling module stage7
+# -- Compiling module stage9
+# -- Compiling module stage11
+# -- Compiling package shiftreg_pkg
+# -- Compiling module shiftreg
+# -- Compiling module lut
+# -- Compiling module lutchain
+# -- Compiling module datapath
+# -- Compiling module fsm
+# -- Compiling module simple_fsm
+# -- Compiling module simpler_fsm
+# 
+# Top level modules:
+# 	stage5
+# 	stage7
+# 	stage9
+# 	stage11
+# 	shiftreg
+# 	lutchain
+# 	simple_fsm
+# 	simpler_fsm
+# End time: 17:47:27 on Jan 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2019.3 Compiler 2019.07 Jul 24 2019
+# Start time: 17:47:27 on Jan 26,2024
+# vlog -reportprogress 300 -sv -work work -cover 0 -f ../sourcecode/tb/file.list 
+# -- Compiling module clk_rst_gen
+# -- Compiling module rst_gen
+# -- Compiling module tb_shiftreg
+# ** Warning: ../sourcecode/tb/tb_shiftreg.sv(44): (vlog-2244) Variable 'stim_fd' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# -- Compiling module tb_lutchain
+# ** Warning: ../sourcecode/tb/tb_lutchain.sv(40): (vlog-2244) Variable 'stim_fd' is implicitly static. You must either explicitly declare it as static or automatic
+# or remove the initialization in the declaration of variable.
+# -- Compiling module tb_simple_fsm
+# -- Compiling module tb_simpler_fsm
+# 
+# Top level modules:
+# 	tb_shiftreg
+# 	tb_lutchain
+# 	tb_simple_fsm
+# 	tb_simpler_fsm
+# End time: 17:47:28 on Jan 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# +acc
+# -debugdb
+# vsim -voptargs="+acc" -debugdb -pedanticerrors -lib work tb_simpler_fsm 
+# Start time: 17:47:28 on Jan 26,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "simpler_fsm(fast)".
+# Loading sv_std.std
+# Loading work.tb_simpler_fsm(fast)
+# Loading work.simpler_fsm(fast)
+# Loading work.clk_rst_gen(fast)
+# Loading work.rst_gen(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /tb_simpler_fsm/stim_appl File: ../sourcecode/tb/tb_simpler_fsm.sv Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /tb_simpler_fsm/stim_appl File: ../sourcecode/tb/tb_simpler_fsm.sv Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /tb_simpler_fsm/stim_appl File: ../sourcecode/tb/tb_simpler_fsm.sv Line: 62
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /tb_simpler_fsm/exp_resp_acq_check File: ../sourcecode/tb/tb_simpler_fsm.sv Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /tb_simpler_fsm/exp_resp_acq_check File: ../sourcecode/tb/tb_simpler_fsm.sv Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Region: /tb_simpler_fsm/exp_resp_acq_check File: ../sourcecode/tb/tb_simpler_fsm.sv Line: 93
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# Test passed with           0 mismatches out of          64 checks.
+# ** Note: $stop    : ../sourcecode/tb/tb_simpler_fsm.sv(102)
+#    Time: 3262 ns  Iteration: 0  Instance: /tb_simpler_fsm
+# Break in NamedBeginStat exp_resp_acq_check at ../sourcecode/tb/tb_simpler_fsm.sv line 102
+# End time: 17:47:36 on Jan 26,2024, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 6

@@ -1,0 +1,60 @@
+#!/bin/csh -f
+
+# v1.3 - <muheim@ee.ethz.ch> - Fri Jun  6 16:18:50 CEST 2014
+# - change the log, and removed old grep
+# v1.2 - <kgf@ee.ethz.ch> - Fri Sep 30 07:56:18 CEST 2011
+# - changed the name of the file to compress 
+# - changed calibre version
+# v1.1 -  BM  - Mon Sep 26 09:36:59 CEST 2011
+# - remove write to verilog2spice.log it will write anyway to v2lvs.log.
+#   zip v2lvs.log
+# v1.0 -  BM  - Fri Sep 23 13:08:55 CEST 2011
+# - Copy from smic 130, add control calls port VDD/VSS not declared
+
+if ( $#argv == 2 ) then
+
+
+   calibre-2013.3 v2lvs -l ./verilog.inc \
+                        -s ./spice.inc \
+                        -s0 VSS \
+                        -s1 VDD \
+                        -sn \
+                        -b \
+                        -w 4 \
+                        -v $1 \
+                        -o $2 |& grep -v -e "Warning: Unsupported compiler directive" \
+								 -e "Warning: Duplicate port/net" \
+								 -e "Second declaration ignored" \
+                 -e "Warning: Module instantiation .* has pin mismatches" \
+                 -e "calls port VSS not declared in module" \
+                 -e "calls port VDD not declared in module"
+   echo ""
+   echo    "Warnings:"
+   echo -n "    Unsupported compiler directive :  "
+   grep -c -e "Warning: Unsupported compiler directive" v2lvs.log 
+   echo -n "    Duplicate port/net :  "
+   grep -c -e "Warning: Duplicate port/net" v2lvs.log 
+   echo -n "    Module instantiation XXXX has pin mismatches :  "
+   grep -c -e "Second declaration ignored" v2lvs.log 
+   echo -n "    Calls port VSS not declared in module :  "
+   grep -c -e "calls port VSS not declared in module" v2lvs.log 
+   echo -n "    Calls port VDD not declared in module :  "
+   grep -c -e "calls port VDD not declared in module" v2lvs.log 
+   echo ""
+   echo "The output is filtered, check the log file v2lvs.log for details."
+   echo ""
+   
+   gzip -f v2lvs.log
+else
+
+   set wrapper_name=$0
+   echo ""
+   echo "Usage: $wrapper_name:t <netlist.v> <netlist.spi>"
+   echo ""
+   echo "       Converts verilog netlist to spice format,"
+   echo "       logfile is 'v2lvs.log'"
+   echo ""
+   echo ""
+   exit 1
+
+endif

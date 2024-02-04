@@ -1,0 +1,131 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Sat Jan 27 18:19:21 2024
+| Host         : tardis-c03 running 64-bit Debian GNU/Linux 10 (buster)
+| Command      : report_control_sets -verbose -file zybo_top_wrapper_control_sets_placed.rpt
+| Design       : zybo_top_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    60 |
+| Unused register locations in slices containing registers |   231 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             344 |          124 |
+| No           | No                    | Yes                    |              53 |           34 |
+| No           | Yes                   | No                     |             118 |           55 |
+| Yes          | No                    | No                     |              39 |           17 |
+| Yes          | No                    | Yes                    |             216 |           64 |
+| Yes          | Yes                   | No                     |             463 |          112 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+
+|                           Clock Signal                           |                                                     Enable Signal                                                    |                                         Set/Reset Signal                                         | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/tx_dc_fifo/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/rd_rst_reg2 |                1 |              1 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/RdyLostReset/SyncAsyncx/oSyncStages[1]              |                1 |              1 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_rx/rx_dc_fifo/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/wr_rst_reg2 |                1 |              1 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        |                                                                                                                      |                                                                                                  |                1 |              1 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]             |                1 |              2 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/LockLostReset/aRst_int_0                |                1 |              2 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/LockLostReset/aRst_int_0                            |                1 |              2 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/RdyLostReset/aRst_int                               |                1 |              2 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/in0                                                 |                1 |              2 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/hdmi_rx/rst_gen/inst/i_rst_gen/p_1_in                                                                     | zybo_top_i/hdmi_rx/rst_gen/inst/i_rst_gen/clear                                                  |                1 |              4 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/Filter.cntPeriods[3]_i_2__0_n_0 | zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSCL/SS[0]           |                2 |              4 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/Filter.cntPeriods[3]_i_2_n_0    | zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSDA/SS[0]           |                2 |              4 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_rx/rst_gen/inst/i_rst_gen/rst_o                                                  |                2 |              4 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/sel                                                                     | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]             |                2 |              5 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/pCenterTap[5]_i_1__0_n_0                          |                                                                                                  |                3 |              5 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/PhaseAlignX/pCenterTap[5]_i_1_n_0                             |                                                                                                  |                3 |              5 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/PhaseAlignX/pCenterTap[5]_i_1__1_n_0                          |                                                                                                  |                2 |              5 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              5 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/DataEncoders[0].DataEncoder/p_1_in                                 |                5 |              5 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst                    |                2 |              7 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst                    |                3 |              7 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst                    |                4 |              7 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/ChannelBondX/pDataIn_reg[0][0]            |                2 |              8 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/dataByte[7]_i_1_n_0                         |                                                                                                  |                6 |              8 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/ChannelBondX/pDataIn_reg[0][0]            |                3 |              8 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/LockLostReset/SyncAsyncx/oSyncStages[1]                            |                6 |              9 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/ChannelBondX/pRdEn                                            | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/SR[0]                         |                2 |             10 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/ChannelBondX/pRdEn                                            | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/SR[0]                         |                2 |             10 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/ChannelBondX/pRdEn                                            | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/SR[0]                         |                2 |             10 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_0                 |                3 |             10 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/pStateNxt                                         | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/pAlignRst_reg_n_0                         |                4 |             11 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/ChannelBondX/pC1_reg[0]                   |                6 |             11 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/PhaseAlignX/pStateNxt                                         | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/pAlignRst_reg_n_0                         |                3 |             11 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/PhaseAlignX/pStateNxt                                         | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/pAlignRst_reg_n_0                         |                3 |             11 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        |                                                                                                                      | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |               10 |             12 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/LockLostReset/SyncAsyncx/oSyncStages[1]                            |                8 |             12 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/DataEncoders[2].DataEncoder/p_1_in                                 |                8 |             15 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      | zybo_top_i/hdmi_tx/rgb2dvi/U0/DataEncoders[1].DataEncoder/p_1_in                                 |                9 |             15 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/E[0]                                        |                                                                                                  |                3 |             16 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/PhaseAlignX/SR[0]                         |                8 |             21 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/sel                                                           | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[1].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]     |                6 |             24 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/sel                                                           | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]     |                6 |             24 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/sel                                                           | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[2].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]     |                6 |             24 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_oup_reg/i_spill_register/a_data_q[26]_i_1__1_n_0                              | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |               13 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_oup_reg/i_spill_register/b_fill                                               | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                5 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_oup_reg/i_spill_register/b_fill                                                    | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                8 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_ff_oup_reg/i_spill_register/a_data_q[26]_i_1__2_n_0                                | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                5 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_ff_oup_reg/i_spill_register/b_fill                                                 | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                7 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_ff_oup_reg/i_spill_register/rgb_q_reg[0]                                           | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                6 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_ff_oup_reg/i_spill_register/rgb_q_reg[0]_0                                         | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                6 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_ff_oup_reg/i_spill_register/E[0]                                                   | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                9 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_inp_reg/i_spill_register/a_fill                                                    | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                8 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_inp_reg/i_spill_register/b_fill                                                    | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |                9 |             27 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                        |                                                                                                                      |                                                                                                  |               20 |             38 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] | zybo_top_i/hdmi_rx/dvi2rgb/U0/DataDecoders[0].DecoderX/PhaseAlignX/pAllVld                                           |                                                                                                  |                6 |             48 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_oup_reg/i_spill_register/rgb_q_reg[0]                                         | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |               21 |             65 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                                                      |                                                                                                  |               51 |            142 |
+|  zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                                                      |                                                                                                  |               54 |            165 |
+|  zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2                        | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_oup_reg/i_spill_register/hsync_q_reg                                          | zybo_top_i/rgb_proc_wrap_0/inst/i_proc_rt_oup_reg/hsync_q_reg_0                                  |               38 |            192 |
++------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     4 |
+| 2      |                     6 |
+| 4      |                     4 |
+| 5      |                     6 |
+| 7      |                     3 |
+| 8      |                     3 |
+| 9      |                     1 |
+| 10     |                     4 |
+| 11     |                     4 |
+| 12     |                     2 |
+| 15     |                     2 |
+| 16+    |                    21 |
++--------+-----------------------+
+
+

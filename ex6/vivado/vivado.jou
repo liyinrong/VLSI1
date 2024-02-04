@@ -1,0 +1,209 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Jan 27 17:09:35 2024
+# Process ID: 23683
+# Current directory: /home/vlsi1_010hs23/ex6/vivado
+# Command line: vivado
+# Log file: /home/vlsi1_010hs23/ex6/vivado/vivado.log
+# Journal file: /home/vlsi1_010hs23/ex6/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/vlsi1_010hs23/ex6/vivado/ex6.xpr
+open_bd_design {/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd}
+update_compile_order -fileset sources_1
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+regenerate_bd_layout
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_tx]
+save_bd_design
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 fifo_generator_0
+endgroup
+set_property name rx_dc_fifo [get_bd_cells fifo_generator_0]
+delete_bd_objs [get_bd_cells rx_dc_fifo]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 hdmi_rx/fifo_generator_0
+endgroup
+set_property name rx_dc_fifo [get_bd_cells hdmi_rx/fifo_generator_0]
+startgroup
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Input_Data_Width {27} CONFIG.Input_Depth {512} CONFIG.Output_Data_Width {27} CONFIG.Output_Depth {512} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Use_Dout_Reset {false} CONFIG.Data_Count_Width {9} CONFIG.Write_Data_Count_Width {9} CONFIG.Read_Data_Count_Width {9} CONFIG.Full_Threshold_Assert_Value {505} CONFIG.Full_Threshold_Negate_Value {504} CONFIG.Empty_Threshold_Assert_Value {5} CONFIG.Empty_Threshold_Negate_Value {6}] [get_bd_cells hdmi_rx/rx_dc_fifo]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Read_Clock_Frequency {150} CONFIG.Write_Clock_Frequency {100} CONFIG.Full_Threshold_Assert_Value {503} CONFIG.Full_Threshold_Negate_Value {502}] [get_bd_cells hdmi_rx/rx_dc_fifo]
+endgroup
+set_property location {3 584 490} [get_bd_cells hdmi_rx/rx_dc_fifo]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/PixelClk] [get_bd_pins hdmi_rx/rx_dc_fifo/wr_clk]
+connect_bd_net [get_bd_pins hdmi_rx/concat_rgb/dout] [get_bd_pins hdmi_rx/rx_dc_fifo/din]
+delete_bd_objs [get_bd_nets hdmi_rx/rgb_concat_dout]
+connect_bd_net [get_bd_pins hdmi_rx/concat_rgb/dout] [get_bd_pins hdmi_rx/rx_dc_fifo/din]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/dout] [get_bd_pins hdmi_rx/slice_b/Din]
+connect_bd_net [get_bd_pins hdmi_rx/slice_g/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_hsync/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_r/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_vde/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_vsync/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/rd_clk] [get_bd_pins hdmi_rx/clk_gen/clk_out2]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/wr_en] [get_bd_pins hdmi_rx/dvi2rgb/aPixelClkLckd]
+connect_bd_net [get_bd_pins hdmi_rx/ready_i] [get_bd_pins hdmi_rx/rx_dc_fifo/rd_en]
+connect_bd_net [get_bd_pins hdmi_rx/rst_gen/rst_o] [get_bd_pins hdmi_rx/rx_dc_fifo/rst]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_rx/ready_i] -boundary_type upper
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 hdmi_tx/fifo_generator_0
+endgroup
+set_property name tx_dc_fifo [get_bd_cells hdmi_tx/fifo_generator_0]
+startgroup
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Input_Data_Width {27} CONFIG.Input_Depth {512} CONFIG.Read_Clock_Frequency {100} CONFIG.Write_Clock_Frequency {150} CONFIG.Output_Data_Width {27} CONFIG.Output_Depth {512} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Use_Dout_Reset {false} CONFIG.Data_Count_Width {9} CONFIG.Write_Data_Count_Width {9} CONFIG.Read_Data_Count_Width {9} CONFIG.Full_Threshold_Assert_Value {500} CONFIG.Full_Threshold_Negate_Value {499} CONFIG.Empty_Threshold_Assert_Value {5} CONFIG.Empty_Threshold_Negate_Value {6}] [get_bd_cells hdmi_tx/tx_dc_fifo]
+endgroup
+delete_bd_objs [get_bd_nets hdmi_tx/concat_dout]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/tx_dc_fifo/din]
+connect_bd_net [get_bd_pins hdmi_tx/tx_dc_fifo/dout] [get_bd_pins hdmi_tx/slice_b/Din]
+connect_bd_net [get_bd_pins hdmi_tx/slice_g/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_r/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_hsync/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_vsync/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_vde/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/rst_i] [get_bd_pins hdmi_tx/tx_dc_fifo/rst]
+connect_bd_net [get_bd_pins hdmi_tx/proc_clk_i] [get_bd_pins hdmi_tx/tx_dc_fifo/wr_clk]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_clk_i] [get_bd_pins hdmi_tx/tx_dc_fifo/rd_clk]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_rst_ni] [get_bd_pins hdmi_tx/tx_dc_fifo/rd_en]
+connect_bd_net [get_bd_pins hdmi_tx/valid_i] [get_bd_pins hdmi_tx/tx_dc_fifo/wr_en]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 hdmi_tx/util_vector_logic_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells hdmi_tx/util_vector_logic_0]
+endgroup
+set_property name not_full [get_bd_cells hdmi_tx/util_vector_logic_0]
+connect_bd_net [get_bd_pins hdmi_tx/tx_dc_fifo/full] [get_bd_pins hdmi_tx/not_full/Op1]
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_tx/not_full/Res]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_tx]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 hdmi_rx/util_vector_logic_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells hdmi_rx/util_vector_logic_0]
+endgroup
+set_property name not_empty [get_bd_cells hdmi_rx/util_vector_logic_0]
+set_property location {2 602 676} [get_bd_cells hdmi_rx/not_empty]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/empty] [get_bd_pins hdmi_rx/not_empty/Op1]
+connect_bd_net [get_bd_pins hdmi_rx/valid_o] [get_bd_pins hdmi_rx/not_empty/Res]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+save_bd_design
+connect_bd_net [get_bd_pins hdmi_rx/valid_o] [get_bd_pins hdmi_tx/valid_i] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_rx/ready_i] -boundary_type upper
+regenerate_bd_layout
+save_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells xlconcat_0]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+startgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3} CONFIG.IN1_WIDTH {2}] [get_bd_cells xlconcat_0]
+endgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/In3] [get_bd_pins hdmi_tx/tx_dc_fifo/full]
+connect_bd_net [get_bd_pins xlconcat_0/In2] [get_bd_pins hdmi_tx/tx_dc_fifo/empty]
+delete_bd_objs [get_bd_nets hdmi_tx_full]
+undo
+undo
+undo
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins hdmi_tx/tx_dc_fifo/full]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/full] [get_bd_pins xlconcat_0/In3]
+startgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3}] [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_nets hdmi_rx_full]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/In2] [get_bd_pins hdmi_rx/full]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {2} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xlconcat_0/In1]
+regenerate_bd_layout
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+regenerate_bd_layout
+open_run impl_1
+close_design
+create_bd_cell -type module -reference rgb_proc_wrap rgb_proc_wrap_0
+set_property location {1 69 308} [get_bd_cells rgb_proc_wrap_0]
+connect_bd_net [get_bd_pins hdmi_rx/rst_no] [get_bd_pins rgb_proc_wrap_0/rst_ni]
+startgroup
+connect_bd_net [get_bd_pins hdmi_rx/proc_clk_o] [get_bd_pins rgb_proc_wrap_0/clk_i]
+endgroup
+delete_bd_objs [get_bd_nets r_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/r_o] [get_bd_pins rgb_proc_wrap_0/r_i]
+delete_bd_objs [get_bd_nets g_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/g_o] [get_bd_pins rgb_proc_wrap_0/g_i]
+delete_bd_objs [get_bd_nets b_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/b_o] [get_bd_pins rgb_proc_wrap_0/b_i]
+delete_bd_objs [get_bd_nets vsync_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/vsync_o] [get_bd_pins rgb_proc_wrap_0/vsync_i]
+delete_bd_objs [get_bd_nets hsync_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/hsync_o] [get_bd_pins rgb_proc_wrap_0/hsync_i]
+delete_bd_objs [get_bd_nets vde_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/vde_o] [get_bd_pins rgb_proc_wrap_0/vde_i]
+delete_bd_objs [get_bd_nets hdmi_rx_valid_o]
+connect_bd_net [get_bd_pins hdmi_rx/valid_o] [get_bd_pins rgb_proc_wrap_0/valid_i]
+delete_bd_objs [get_bd_nets hdmi_tx_ready_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/ready_o] [get_bd_pins hdmi_rx/ready_i]
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins rgb_proc_wrap_0/ready_i]
+connect_bd_net [get_bd_pins hdmi_tx/r_i] [get_bd_pins rgb_proc_wrap_0/r_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/g_o] [get_bd_pins hdmi_tx/g_i]
+connect_bd_net [get_bd_pins hdmi_tx/b_i] [get_bd_pins rgb_proc_wrap_0/b_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/hsync_o] [get_bd_pins hdmi_tx/hsync_i]
+connect_bd_net [get_bd_pins hdmi_tx/vsync_i] [get_bd_pins rgb_proc_wrap_0/vsync_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/vde_o] [get_bd_pins hdmi_tx/vde_i]
+connect_bd_net [get_bd_pins hdmi_tx/valid_i] [get_bd_pins rgb_proc_wrap_0/valid_o]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property name concat_led [get_bd_cells xlconcat_0]
+set_property name constant_0 [get_bd_cells xlconstant_0]
+set_property name slice_switch [get_bd_cells xlslice_0]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {3} CONFIG.DIN_FROM {3} CONFIG.DIN_WIDTH {4} CONFIG.DIN_FROM {3} CONFIG.DOUT_WIDTH {1}] [get_bd_cells slice_switch]
+endgroup
+set_property name slice_enable [get_bd_cells slice_switch]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property name slice_switch [get_bd_cells xlslice_0]
+startgroup
+set_property -dict [list CONFIG.DIN_FROM {2} CONFIG.DIN_WIDTH {4} CONFIG.DIN_TO {0} CONFIG.DOUT_WIDTH {3}] [get_bd_cells slice_switch]
+endgroup
+connect_bd_net [get_bd_ports switch_i] [get_bd_pins slice_enable/Din]
+connect_bd_net [get_bd_ports switch_i] [get_bd_pins slice_switch/Din]
+connect_bd_net [get_bd_pins slice_enable/Dout] [get_bd_pins rgb_proc_wrap_0/enable_i]
+connect_bd_net [get_bd_pins slice_switch/Dout] [get_bd_pins rgb_proc_wrap_0/switch_i]
+regenerate_bd_layout
+save_bd_design
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+connect_bd_net [get_bd_ports led_o] [get_bd_pins concat_led/dout]
+regenerate_bd_layout
+save_bd_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+close_design

@@ -1,0 +1,9 @@
+*pexRulesFile: /usr/pack/umc-65-kgf/dz/calibre/2011.2/pex/G-DF-LOGIC_MIXED_MODE90N-1P9M-LOW_K_CALIBRE-LVS-1.2-P5.txt
+*pexRunDir: ../calibre/pex
+*pexLayoutGetFromViewer: 1
+*pexSourceGetFromViewer: 1
+*pexPexNetlistFormat: CALIBREVIEW
+*pexPexViewPexNetlist: 0
+*cmnShowOptions: 1
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0

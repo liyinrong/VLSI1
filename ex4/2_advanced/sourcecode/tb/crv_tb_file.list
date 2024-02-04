@@ -1,0 +1,4 @@
+../sourcecode/tb/rgb_sat_crv_tb.sv
+../sourcecode/tb/clk_rst_gen.sv
+../sourcecode/tb/rst_gen.sv
+../sourcecode/tb/rand_stream_mst.sv

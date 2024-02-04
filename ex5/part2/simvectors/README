@@ -1,0 +1,17 @@
+Directory structure:
+--------------------
+.
+|-- Makefile					       Makefile for test vector generation.
+|-- README					       This file.
+|-- fsm_change1_expresp.asc			       The expected responses for fsm including the first change.
+|-- fsm_change2_expresp.asc			       The expected responses for fsm including the second change.
+|-- fsm_initial_expresp.asc			       The expected responses for the initial design of fsm.
+|-- fsm_stimuli.asc				       A stimuli file for all test runs of fsm.
+`-- src
+    `-- ControlDataPathTestVectorGenerator.java        JAVA source file which can be used in order to generate the test vectors for fsm.
+
+
+Makefile:
+---------
+Use the makefile in order to generate the test vectors for the control/datapath
+and the Sbox example out of the Java file located in the 'src' directory.

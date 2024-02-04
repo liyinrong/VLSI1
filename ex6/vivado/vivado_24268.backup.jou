@@ -1,0 +1,217 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Jan 27 14:07:34 2024
+# Process ID: 24268
+# Current directory: /home/vlsi1_010hs23/ex6/vivado
+# Command line: vivado -mode gui -source scripts/open_proj.tcl ex6.xpr
+# Log file: /home/vlsi1_010hs23/ex6/vivado/vivado.log
+# Journal file: /home/vlsi1_010hs23/ex6/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project ex6.xpr
+source scripts/open_proj.tcl
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+set_property location {570 324} [get_bd_ports hdmi_tx_n_o]
+set_property location {570 284} [get_bd_ports hdmi_tx_clk_n_o]
+set_property location {570 344} [get_bd_ports hdmi_tx_p_o]
+set_property location {570 364} [get_bd_ports led_o]
+set_property location {570 264} [get_bd_ports hdmi_rx_hpd_o]
+set_property location {570 244} [get_bd_intf_ports hdmi_rx_ddc]
+set_property location {570 304} [get_bd_ports hdmi_tx_clk_p_o]
+endgroup
+undo
+startgroup
+set_property location {504 139} [get_bd_ports hdmi_tx_n_o]
+set_property location {504 99} [get_bd_ports hdmi_tx_clk_n_o]
+set_property location {504 159} [get_bd_ports hdmi_tx_p_o]
+set_property location {504 99} [get_bd_ports led_o]
+set_property location {504 79} [get_bd_ports hdmi_rx_hpd_o]
+set_property location {504 59} [get_bd_intf_ports hdmi_rx_ddc]
+set_property location {504 79} [get_bd_ports hdmi_tx_clk_p_o]
+endgroup
+undo
+set_property location {1.5 352 170} [get_bd_cells hdmi_tx]
+regenerate_bd_layout
+undo
+connect_bd_net [get_bd_ports clk_i] [get_bd_pins hdmi_rx/clk_i]
+connect_bd_net [get_bd_ports hdmi_rx_p_i] [get_bd_pins hdmi_rx/hdmi_p_i]
+connect_bd_net [get_bd_ports hdmi_rx_clk_p_i] [get_bd_pins hdmi_rx/hdmi_clk_p_i]
+connect_bd_net [get_bd_ports hdmi_rx_n_i] [get_bd_pins hdmi_rx/hdmi_n_i]
+connect_bd_net [get_bd_ports hdmi_rx_clk_n_i] [get_bd_pins hdmi_rx/hdmi_clk_n_i]
+connect_bd_intf_net [get_bd_intf_ports hdmi_rx_ddc] -boundary_type upper [get_bd_intf_pins hdmi_rx/ddc]
+set_property location {1227 354} [get_bd_ports hdmi_rx_hpd_o]
+undo
+connect_bd_net [get_bd_ports hdmi_rx_hpd_o] [get_bd_pins hdmi_rx/rst_no]
+regenerate_bd_layout
+set_property location {1.5 413 178} [get_bd_cells hdmi_tx]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 hdmi_rx/xlconcat_0
+endgroup
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells hdmi_rx/xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells hdmi_rx/xlconcat_0]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pData] [get_bd_pins hdmi_rx/xlconcat_0/In0]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pVDE] [get_bd_pins hdmi_rx/xlconcat_0/In3]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pHSync] [get_bd_pins hdmi_rx/xlconcat_0/In2]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pVSync] [get_bd_pins hdmi_rx/xlconcat_0/In1]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 hdmi_rx/xlslice_0
+endgroup
+delete_bd_objs [get_bd_nets hdmi_rx/dvi2rgb_vid_pVSync] [get_bd_nets hdmi_rx/dvi2rgb_vid_pData] [get_bd_nets hdmi_rx/dvi2rgb_vid_pHSync] [get_bd_nets hdmi_rx/dvi2rgb_vid_pVDE] [get_bd_cells hdmi_rx/xlconcat_0]
+delete_bd_objs [get_bd_cells hdmi_rx/xlslice_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 hdmi_rx/xlconcat_0
+endgroup
+delete_bd_objs [get_bd_cells hdmi_rx/xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 hdmi_rx/xlconcat_0
+endgroup
+delete_bd_objs [get_bd_cells hdmi_rx/xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 hdmi_rx/xlconcat_0
+endgroup
+delete_bd_objs [get_bd_cells hdmi_rx/xlconcat_0]
+open_bd_design {/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+delete_bd_objs [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 hdmi_rx/xlconcat_0
+endgroup
+set_property name rgb_concat [get_bd_cells hdmi_rx/xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells hdmi_rx/rgb_concat]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pData] [get_bd_pins hdmi_rx/rgb_concat/In0]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pVDE] [get_bd_pins hdmi_rx/rgb_concat/In3]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pHSync] [get_bd_pins hdmi_rx/rgb_concat/In2]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/vid_pVSync] [get_bd_pins hdmi_rx/rgb_concat/In1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 hdmi_rx/xlslice_0
+endgroup
+set_property name data_slice [get_bd_cells hdmi_rx/xlslice_0]
+copy_bd_objs hdmi_rx  [get_bd_cells {hdmi_rx/data_slice}]
+set_property name hsync_slice [get_bd_cells hdmi_rx/data_slice1]
+copy_bd_objs hdmi_rx  [get_bd_cells {hdmi_rx/data_slice}]
+set_property name vsync_slice [get_bd_cells hdmi_rx/data_slice1]
+copy_bd_objs hdmi_rx  [get_bd_cells {hdmi_rx/data_slice}]
+set_property name vde_slice [get_bd_cells hdmi_rx/data_slice1]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {26} CONFIG.DIN_FROM {26} CONFIG.DIN_WIDTH {27} CONFIG.DIN_FROM {26} CONFIG.DOUT_WIDTH {1}] [get_bd_cells hdmi_rx/vde_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/rgb_concat/dout] [get_bd_pins hdmi_rx/vde_slice/Din]
+connect_bd_net [get_bd_pins hdmi_rx/vde_o] [get_bd_pins hdmi_rx/vde_slice/Dout]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {25} CONFIG.DIN_FROM {25} CONFIG.DIN_WIDTH {27} CONFIG.DIN_FROM {25} CONFIG.DOUT_WIDTH {1}] [get_bd_cells hdmi_rx/hsync_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/hsync_slice/Din] [get_bd_pins hdmi_rx/rgb_concat/dout]
+connect_bd_net [get_bd_pins hdmi_rx/hsync_o] [get_bd_pins hdmi_rx/hsync_slice/Dout]
+startgroup
+set_property -dict [list CONFIG.DIN_FROM {23} CONFIG.DIN_WIDTH {27} CONFIG.DIN_TO {0} CONFIG.DOUT_WIDTH {24}] [get_bd_cells hdmi_rx/data_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/data_slice/Din] [get_bd_pins hdmi_rx/rgb_concat/dout]
+set_property name r_slice [get_bd_cells hdmi_rx/data_slice]
+copy_bd_objs hdmi_rx  [get_bd_cells {hdmi_rx/r_slice}]
+set_property name g_slice [get_bd_cells hdmi_rx/r_slice1]
+copy_bd_objs hdmi_rx  [get_bd_cells {hdmi_rx/r_slice}]
+set_property name b_slice [get_bd_cells hdmi_rx/r_slice1]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {16} CONFIG.DIN_FROM {23} CONFIG.DOUT_WIDTH {8}] [get_bd_cells hdmi_rx/r_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/r_o] [get_bd_pins hdmi_rx/r_slice/Dout]
+connect_bd_net [get_bd_pins hdmi_rx/g_slice/Din] [get_bd_pins hdmi_rx/rgb_concat/dout]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {8} CONFIG.DIN_FROM {15} CONFIG.DIN_FROM {15} CONFIG.DOUT_WIDTH {8}] [get_bd_cells hdmi_rx/g_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/g_o] [get_bd_pins hdmi_rx/g_slice/Dout]
+connect_bd_net [get_bd_pins hdmi_rx/b_slice/Din] [get_bd_pins hdmi_rx/rgb_concat/dout]
+startgroup
+set_property -dict [list CONFIG.DIN_FROM {7} CONFIG.DOUT_WIDTH {8}] [get_bd_cells hdmi_rx/b_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/b_o] [get_bd_pins hdmi_rx/b_slice/Dout]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {24} CONFIG.DIN_FROM {24} CONFIG.DIN_WIDTH {27} CONFIG.DIN_FROM {24} CONFIG.DOUT_WIDTH {1}] [get_bd_cells hdmi_rx/vsync_slice]
+endgroup
+connect_bd_net [get_bd_pins hdmi_rx/vsync_slice/Din] [get_bd_pins hdmi_rx/rgb_concat/dout]
+connect_bd_net [get_bd_pins hdmi_rx/vsync_o] [get_bd_pins hdmi_rx/vsync_slice/Dout]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+connect_bd_net [get_bd_pins hdmi_rx/proc_clk_o] [get_bd_pins hdmi_rx/clk_gen/clk_out2]
+connect_bd_net [get_bd_pins hdmi_rx/hdmi_clk_o] [get_bd_pins hdmi_rx/dvi2rgb/PixelClk]
+connect_bd_net [get_bd_pins hdmi_rx/hdmi_rst_no] [get_bd_pins hdmi_rx/dvi2rgb/aPixelClkLckd]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+set_property name concat [get_bd_cells hdmi_rx/rgb_concat]
+set_property name slice_b [get_bd_cells hdmi_rx/b_slice]
+set_property name slice_g [get_bd_cells hdmi_rx/g_slice]
+set_property name slice_hsync [get_bd_cells hdmi_rx/hsync_slice]
+set_property name slice_r [get_bd_cells hdmi_rx/r_slice]
+set_property name slice_vde [get_bd_cells hdmi_rx/vde_slice]
+set_property name slice_vsync [get_bd_cells hdmi_rx/vsync_slice]
+set_property location {3 671 271} [get_bd_cells hdmi_rx/slice_r]
+set_property location {3 671 807} [get_bd_cells hdmi_rx/slice_vde]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+set_property location {3.5 1222 502} [get_bd_cells hdmi_rx/slice_hsync]
+set_property location {3 695 505} [get_bd_cells hdmi_rx/slice_g]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+set_property location {3 673 414} [get_bd_cells hdmi_rx/slice_b]
+set_property location {3 685 320} [get_bd_cells hdmi_rx/slice_r]
+set_property location {3 666 680} [get_bd_cells hdmi_rx/slice_vsync]
+set_property location {968 677} [get_bd_pins hdmi_rx/vsync_o]
+set_property location {968 500} [get_bd_pins hdmi_rx/r_o]
+set_property location {961 501} [get_bd_pins hdmi_rx/g_o]
+set_property location {963 404} [get_bd_pins hdmi_rx/b_o]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+set_property name concat_rgb [get_bd_cells hdmi_rx/concat]
+set_property location {-59 27} [get_bd_pins hdmi_tx/b_i]
+undo
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_tx]
+startgroup
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells hdmi_rx/concat_rgb]
+set_property -dict [list CONFIG.IN0_WIDTH {24}] [get_bd_cells hdmi_rx/concat_rgb]
+endgroup
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+connect_bd_net [get_bd_pins hdmi_tx/b_i] [get_bd_pins hdmi_tx/concat/In0]
+connect_bd_net [get_bd_pins hdmi_tx/g_i] [get_bd_pins hdmi_tx/concat/In1]
+connect_bd_net [get_bd_pins hdmi_tx/r_i] [get_bd_pins hdmi_tx/concat/In2]
+connect_bd_net [get_bd_pins hdmi_tx/vde_i] [get_bd_pins hdmi_tx/concat/In5]
+connect_bd_net [get_bd_pins hdmi_tx/hsync_i] [get_bd_pins hdmi_tx/concat/In4]
+connect_bd_net [get_bd_pins hdmi_tx/vsync_i] [get_bd_pins hdmi_tx/concat/In3]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/slice_g/Din]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/slice_r/Din]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/slice_vsync/Din]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/slice_b/Din]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/slice_hsync/Din]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/slice_vde/Din]
+connect_bd_net [get_bd_pins hdmi_tx/slice_r/Dout] [get_bd_pins hdmi_tx/concat_rgb/In2]
+connect_bd_net [get_bd_pins hdmi_tx/slice_g/Dout] [get_bd_pins hdmi_tx/concat_rgb/In1]
+connect_bd_net [get_bd_pins hdmi_tx/slice_b/Dout] [get_bd_pins hdmi_tx/concat_rgb/In0]
+connect_bd_net [get_bd_pins hdmi_tx/concat_rgb/dout] [get_bd_pins hdmi_tx/rgb2dvi/vid_pData]
+connect_bd_net [get_bd_pins hdmi_tx/slice_hsync/Dout] [get_bd_pins hdmi_tx/rgb2dvi/vid_pHSync]
+connect_bd_net [get_bd_pins hdmi_tx/slice_vsync/Dout] [get_bd_pins hdmi_tx/rgb2dvi/vid_pVSync]
+connect_bd_net [get_bd_pins hdmi_tx/slice_vde/Dout] [get_bd_pins hdmi_tx/rgb2dvi/vid_pVDE]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_clk_p_o] [get_bd_pins hdmi_tx/rgb2dvi/TMDS_Clk_p]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_clk_n_o] [get_bd_pins hdmi_tx/rgb2dvi/TMDS_Clk_n]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_p_o] [get_bd_pins hdmi_tx/rgb2dvi/TMDS_Data_p]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_n_o] [get_bd_pins hdmi_tx/rgb2dvi/TMDS_Data_n]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_tx]
+connect_bd_net [get_bd_ports hdmi_tx_clk_n_o] [get_bd_pins hdmi_tx/hdmi_clk_n_o]
+connect_bd_net [get_bd_ports hdmi_tx_n_o] [get_bd_pins hdmi_tx/hdmi_n_o]
+connect_bd_net [get_bd_ports hdmi_tx_p_o] [get_bd_pins hdmi_tx/hdmi_p_o]
+connect_bd_net [get_bd_ports hdmi_tx_clk_p_o] [get_bd_pins hdmi_tx/hdmi_clk_p_o]
+connect_bd_net [get_bd_pins hdmi_tx/proc_clk_i] [get_bd_pins hdmi_rx/proc_clk_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_clk_i] [get_bd_pins hdmi_rx/hdmi_clk_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_rst_ni] [get_bd_pins hdmi_rx/hdmi_rst_no] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/r_i] [get_bd_pins hdmi_rx/r_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/g_i] [get_bd_pins hdmi_rx/g_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/b_i] [get_bd_pins hdmi_rx/b_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/vsync_i] [get_bd_pins hdmi_rx/vsync_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/hsync_i] [get_bd_pins hdmi_rx/hsync_o] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/vde_i] [get_bd_pins hdmi_rx/vde_o] -boundary_type upper
+regenerate_bd_layout
+connect_bd_net [get_bd_pins hdmi_rx/rst_o] [get_bd_pins hdmi_tx/rst_i] -boundary_type upper
+regenerate_bd_layout
+save_bd_design
+close_bd_design [get_bd_designs zybo_top]

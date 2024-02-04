@@ -1,0 +1,9 @@
+*drcRulesFile: /usr/pack/umc-65-kgf/dz/calibre/2011.2/drc/G-DF-GENERATION55N_65N-1P8M-BOAC-Calibre-drc-1.2_P1
+*drcRunDir: ../calibre/drc
+*drcLayoutPaths: ../dfii/
+*drcLayoutGetFromViewer: 0
+*drcResultsFile: boac.drc.results
+*drcSummaryFile: boac.drc.summary
+*cmnRunMT: 1
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0

@@ -1,0 +1,68 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port rst_o -pg 1 -y 1130 -defaultsOSRD
+preplace port full -pg 1 -y 160 -defaultsOSRD
+preplace port valid_o -pg 1 -y 610 -defaultsOSRD
+preplace port hdmi_clk_n_i -pg 1 -y 100 -defaultsOSRD
+preplace port hdmi_clk_p_i -pg 1 -y 80 -defaultsOSRD
+preplace port ddc -pg 1 -y 140 -defaultsOSRD
+preplace port hdmi_rst_no -pg 1 -y 180 -defaultsOSRD
+preplace port ready_i -pg 1 -y 370 -defaultsOSRD
+preplace port hdmi_clk_o -pg 1 -y 200 -defaultsOSRD
+preplace port rst_no -pg 1 -y 1150 -defaultsOSRD
+preplace port clk_i -pg 1 -y 440 -defaultsOSRD
+preplace port proc_clk_o -pg 1 -y 1110 -defaultsOSRD
+preplace portBus g_o -pg 1 -y 700 -defaultsOSRD
+preplace portBus hdmi_p_i -pg 1 -y 120 -defaultsOSRD
+preplace portBus hsync_o -pg 1 -y 790 -defaultsOSRD
+preplace portBus vde_o -pg 1 -y 970 -defaultsOSRD
+preplace portBus vsync_o -pg 1 -y 1060 -defaultsOSRD
+preplace portBus r_o -pg 1 -y 880 -defaultsOSRD
+preplace portBus hdmi_n_i -pg 1 -y 140 -defaultsOSRD
+preplace portBus b_o -pg 1 -y 520 -defaultsOSRD
+preplace inst rx_dc_fifo -pg 1 -lvl 4 -y 330 -defaultsOSRD
+preplace inst slice_hsync -pg 1 -lvl 4 -y 790 -defaultsOSRD
+preplace inst concat_rgb -pg 1 -lvl 3 -y 80 -defaultsOSRD
+preplace inst slice_b -pg 1 -lvl 4 -y 520 -defaultsOSRD
+preplace inst rst_gen -pg 1 -lvl 3 -y 450 -defaultsOSRD
+preplace inst slice_vde -pg 1 -lvl 4 -y 970 -defaultsOSRD
+preplace inst slice_vsync -pg 1 -lvl 4 -y 1060 -defaultsOSRD
+preplace inst clk_gen -pg 1 -lvl 1 -y 440 -defaultsOSRD
+preplace inst slice_r -pg 1 -lvl 4 -y 880 -defaultsOSRD
+preplace inst dvi2rgb -pg 1 -lvl 2 -y 130 -defaultsOSRD
+preplace inst slice_g -pg 1 -lvl 4 -y 700 -defaultsOSRD
+preplace inst not_empty -pg 1 -lvl 4 -y 610 -defaultsOSRD
+preplace netloc hsync_slice_Dout 1 4 1 NJ
+preplace netloc not_empty_Res 1 4 1 NJ
+preplace netloc hdmi_clk_n_i_1 1 0 2 NJ 100 NJ
+preplace netloc hdmi_n_i_1 1 0 2 NJ 140 NJ
+preplace netloc rx_dc_fifo_full 1 3 2 920 120 1260J
+preplace netloc g_slice_Dout 1 4 1 NJ
+preplace netloc clk_gen_locked 1 1 2 N 460 NJ
+preplace netloc dvi2rgb_vid_pVSync 1 2 1 600
+preplace netloc clk_gen_clk_out1 1 1 1 220
+preplace netloc dvi2rgb_PixelClk 1 2 3 NJ 180 850 180 1240J
+preplace netloc vsync_slice_Dout 1 4 1 NJ
+preplace netloc clk_gen_clk_out2 1 1 4 N 440 600 380 880 150 1250J
+preplace netloc rx_dc_fifo_empty 1 3 1 910
+preplace netloc ready_i_1 1 0 4 NJ 370 NJ 370 NJ 370 NJ
+preplace netloc rst_gen_rst_o 1 3 2 900 170 1220J
+preplace netloc r_slice_Dout 1 4 1 NJ
+preplace netloc dvi2rgb_vid_pVDE 1 2 1 610
+preplace netloc dvi2rgb_vid_pData 1 2 1 590
+preplace netloc rst_gen_rst_no 1 1 4 230 250 NJ 250 890 160 1230J
+preplace netloc clk_i_1 1 0 1 NJ
+preplace netloc concat_rgb_dout 1 3 1 860
+preplace netloc dvi2rgb_aPixelClkLckd 1 2 3 NJ 200 870 110 1270J
+preplace netloc vde_slice_Dout 1 4 1 NJ
+preplace netloc dvi2rgb_DDC 1 2 3 NJ 160 850J 130 1230J
+preplace netloc b_slice_Dout 1 4 1 NJ
+preplace netloc rx_dc_fifo_dout 1 3 1 920
+preplace netloc dvi2rgb_vid_pHSync 1 2 1 610
+preplace netloc hdmi_clk_p_i_1 1 0 2 NJ 80 NJ
+preplace netloc hdmi_p_i_1 1 0 2 NJ 120 NJ
+levelinfo -pg 1 0 120 410 730 1070 1290 -top 0 -bot 1170
+",
+}
+0

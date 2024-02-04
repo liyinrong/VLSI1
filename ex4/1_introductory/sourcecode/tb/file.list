@@ -1,0 +1,3 @@
+../sourcecode/tb/gray_count_tb.sv
+../sourcecode/tb/clk_rst_gen.sv
+../sourcecode/tb/rst_gen.sv

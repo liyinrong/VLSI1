@@ -1,0 +1,514 @@
+m255
+K4
+z2
+!s11f vlog 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/vlsi1_010hs23/ex5/part2/modelsim
+T_opt
+Z1 !s110 1706287648
+VhJYd1;ehPS76LJHYmjnYC0
+04 14 4 work tb_simpler_fsm fast 0
+=1-000ae431a4f1-65b3e220-1dcf7-1afc
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2019.3;69
+vclk_rst_gen
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1706287647
+!i10b 1
+!s100 5Vi`ZgN9772h=YPaPS8Fo2
+!s11b 3NNJ[`mi:[946;Y>A09b^3
+ITB_<[R7VAdl0YS9ND`O4m2
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z6 w1698658347
+8../sourcecode/tb/clk_rst_gen.sv
+F../sourcecode/tb/clk_rst_gen.sv
+!i122 -1
+L0 1
+Z7 OL;L;2019.3;69
+r1
+!s85 0
+31
+Z8 !s108 1706287647.000000
+Z9 !s107 ../sourcecode/tb/tb_simpler_fsm.sv|../sourcecode/tb/tb_simple_fsm.sv|../sourcecode/tb/tb_lutchain.sv|../sourcecode/tb/tb_shiftreg.sv|../sourcecode/tb/rst_gen.sv|../sourcecode/tb/clk_rst_gen.sv|
+Z10 !s90 -reportprogress|300|-sv|-work|work|-cover|0|-f|../sourcecode/tb/file.list|
+!i113 0
+Z11 !s102 -cover 0
+Z12 o-sv -work work -cover 0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdatapath
+R3
+R4
+!i10b 1
+!s100 WY0Em?HBmBQV?52F5aFV21
+!s11b 6jOUbciF2K?a8aBmLGjM91
+I0nPh`OMhVUnQBdz2T6HEz1
+R5
+S1
+R0
+w1706287189
+8../sourcecode/datapath.sv
+F../sourcecode/datapath.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../sourcecode/simpler_fsm.sv|../sourcecode/simple_fsm.sv|../sourcecode/fsm.sv|../sourcecode/datapath.sv|../sourcecode/lutchain.sv|../sourcecode/lut.sv|../sourcecode/shiftreg.sv|../sourcecode/shiftreg_pkg.sv|../sourcecode/stage11.sv|../sourcecode/stage9.sv|../sourcecode/stage7.sv|../sourcecode/stage5.sv|../sourcecode/stage.sv|
+Z14 !s90 -reportprogress|300|-sv|-pedanticerrors|-cover|0|-work|work|-f|../sourcecode/file.list|
+!i113 0
+R11
+Z15 o-sv -pedanticerrors -cover 0 -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vfsm
+R3
+R4
+!i10b 1
+!s100 9nkNYTjYZTo=mZ?^ZjHc=0
+!s11b _^W5Iz_fKOYLQh_:]:11_0
+IIf_<@DPG^SV4UVIZHPVY50
+R5
+S1
+R0
+w1706287296
+8../sourcecode/fsm.sv
+F../sourcecode/fsm.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vlut
+R3
+R4
+!i10b 1
+!s100 9zS?1cV:QOcN`Vbf7NicN2
+!s11b PEDkPF94KiQSPlU:ni?Kg3
+I^2nLJ2f<2=WgP4YBH9Dn>1
+R5
+S1
+R0
+w1706286374
+8../sourcecode/lut.sv
+F../sourcecode/lut.sv
+!i122 -1
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vlutchain
+R3
+R4
+!i10b 1
+!s100 _0[AFh?LBJXJd7X2h9Z3T2
+!s11b :X:Zl;1_9^4nbLOCX8[7>0
+INfZkcjnV_ezB_]cdek2z53
+R5
+S1
+R0
+w1706286300
+8../sourcecode/lutchain.sv
+F../sourcecode/lutchain.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vrst_gen
+R3
+R4
+!i10b 1
+!s100 2?UTB4oGA5F^lVfjd4MZB0
+!s11b ^:bi816a[_bY23PZ7;Q8m1
+I6en3]nLe@]lEMn0ngdLdG3
+R5
+S1
+R0
+R6
+8../sourcecode/tb/rst_gen.sv
+F../sourcecode/tb/rst_gen.sv
+!i122 -1
+L0 11
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vshiftreg
+R3
+R4
+!i10b 1
+!s100 E3[OZD@^<U]Pc:Z;WIffU1
+!s11b Qo[K2djo[;CEjCWhWUaUd2
+IaTS`=Sa8OVj5BzZYmzHJC1
+R5
+S1
+R0
+w1706283275
+8../sourcecode/shiftreg.sv
+F../sourcecode/shiftreg.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+Xshiftreg_pkg
+R3
+R4
+!i10b 1
+!s100 RCeJX9UGUUSEmkzLLm_II3
+!s11b X;da_j1Igm:U0AF7nSLID0
+I_U==S1^@g`Az;aN1]nl8d2
+V_U==S1^@g`Az;aN1]nl8d2
+S1
+R0
+R6
+8../sourcecode/shiftreg_pkg.sv
+F../sourcecode/shiftreg_pkg.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vsimple_fsm
+R3
+R4
+!i10b 1
+!s100 ;[PC8T5=HR36FaDO9aWob3
+!s11b 0C]j>InR7W?mMHK[aX5]23
+I`oGMMUA3bj[8m=NXPLKSb1
+R5
+S1
+R0
+w1706287370
+8../sourcecode/simple_fsm.sv
+F../sourcecode/simple_fsm.sv
+!i122 -1
+L0 7
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vsimpler_fsm
+R3
+R4
+!i10b 1
+!s100 BEaT;87_UPMgU;?eX^zgU1
+!s11b 7=KTzE1FV4CJ<]6@TUkk72
+I:RWiem4`OfWK21N6h>nUl2
+R5
+S1
+R0
+w1706287618
+8../sourcecode/simpler_fsm.sv
+F../sourcecode/simpler_fsm.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vstage
+R3
+R4
+!i10b 1
+!s100 `L;5HiaHe[[CMc>T9@dGF3
+!s11b elzb;:Nkkl`:H^c;bC2Zn2
+IRgdEQU_T8ETZHSI6LKD3O3
+R5
+S1
+R0
+w1706283340
+8../sourcecode/stage.sv
+F../sourcecode/stage.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vstage11
+R3
+R4
+!i10b 1
+!s100 kQ8E]A;^hM5aX_K53TOe;3
+!s11b i0V5<>9>049LUbHDDGl3K3
+IFW`0?ejofV2Rf7IVI=4AA1
+R5
+S1
+R0
+R6
+8../sourcecode/stage11.sv
+F../sourcecode/stage11.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vstage5
+R3
+R4
+!i10b 1
+!s100 D29E7eXdz9D4bfeVXTFQ:0
+!s11b [DI@e1LDhIEJg^f0D:2M>0
+Ib`@ih8mWoF10?>SL@lSRM1
+R5
+S1
+R0
+R6
+8../sourcecode/stage5.sv
+F../sourcecode/stage5.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vstage7
+R3
+R4
+!i10b 1
+!s100 C9J05=O[e6EC2Y0lRUF7B1
+!s11b a9_;5a@87CGBG>lfS?i;Z0
+I8SOTNH`FDhRIzCjSMOG[B2
+R5
+S1
+R0
+R6
+8../sourcecode/stage7.sv
+F../sourcecode/stage7.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vstage9
+R3
+R4
+!i10b 1
+!s100 jkQU5`Pa3gTQfBCWd^5kf2
+!s11b >S_m?OO93j9WJFD=[6Sa80
+I<h7P8T1l:UlWKF;0M3X063
+R5
+S1
+R0
+R6
+8../sourcecode/stage9.sv
+F../sourcecode/stage9.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 0
+R11
+R15
+R2
+vtb_lutchain
+R3
+R4
+!i10b 1
+!s100 JPS^3@mF2VVB46Izh0DHF1
+!s11b [Ua@2>n?Z2Z>7gJ^UL:oA3
+In4iD]LhXaGzi@TGVXd86A3
+R5
+S1
+R0
+w1706286255
+8../sourcecode/tb/tb_lutchain.sv
+F../sourcecode/tb/tb_lutchain.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vtb_shiftreg
+R3
+R4
+!i10b 1
+!s100 eHCBLZdzHBh969ioC8K063
+!s11b M6cneF4_J5V[7jlba=Ad@0
+IA[T76lHX4W^LSW0Jg=QPU2
+R5
+S1
+R0
+w1706282698
+8../sourcecode/tb/tb_shiftreg.sv
+F../sourcecode/tb/tb_shiftreg.sv
+!i122 -1
+L0 7
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vtb_simple_fsm
+R3
+R1
+!i10b 1
+!s100 GfiG]5NUMF0QLU4oI95F20
+!s11b ?hBOK>]SZ5YCC=<^[Xggl3
+IAl^W29_ood:d>gk42S6RP0
+R5
+S1
+R0
+w1706287307
+8../sourcecode/tb/tb_simple_fsm.sv
+F../sourcecode/tb/tb_simple_fsm.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vtb_simpler_fsm
+R3
+R1
+!i10b 1
+!s100 jGkk:>PS5kf2^gn1RcenR2
+!s11b @4J0YCf6RbEL`:`]:OBVh0
+If;W96Xo::0k57EC:U;=oX3
+R5
+S1
+R0
+w1706287637
+8../sourcecode/tb/tb_simpler_fsm.sv
+F../sourcecode/tb/tb_simpler_fsm.sv
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2

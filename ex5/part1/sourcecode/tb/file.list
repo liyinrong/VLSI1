@@ -1,0 +1,5 @@
+../sourcecode/tb/rst_gen.sv
+../sourcecode/tb/clk_rst_gen.sv
+../sourcecode/tb/tb_traffic_ctrl.sv
+../sourcecode/tb/tb_rgb_grayscaler.sv
+../sourcecode/tb/tb_fsm_counter.sv

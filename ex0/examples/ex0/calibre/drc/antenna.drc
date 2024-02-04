@@ -1,0 +1,9 @@
+*drcRulesFile: /usr/pack/umc-65-kgf/dz/calibre/2011.2/drc/umc_ant_L65_calibre_V14_36KA_L2
+*drcRunDir: ../calibre/drc
+*drcLayoutPaths: ../dfii/
+*drcLayoutGetFromViewer: 0
+*drcResultsFile: chip.drc.results
+*drcSummaryFile: chip.drc.summary
+*cmnRunMT: 1
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0

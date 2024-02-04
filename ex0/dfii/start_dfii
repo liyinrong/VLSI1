@@ -1,0 +1,45 @@
+#! /bin/csh -f
+# v1.1 - <muheim@ee.ethz.ch> - Tue Apr 22 10:38:07 CEST 2014
+#  - update to newer version, remove not existing and old.
+# v1.0 - <kgf@ee.ethz.ch> - Mon Jun  6 15:52:14 CEST 2011
+#  - version for IC610
+
+## the variables to be set
+setenv CDS_Netlisting_Mode "Analog"
+
+#  setenv CDS_LOAD_ENV CWD
+#
+#          CWD:  loads only the ./.cdsenv
+#        False: loads neither ~/.cdsenv nor ./.cdsenv
+#       addCWD: loads ~/.cdsenv , then load ./.cdsenv
+#  CWDElseHome: loads ./.cdsenv if it exists, or ~/.cdsenv , if it exists
+setenv CDS_LOAD_ENV "CWDElseHome"
+
+# Calibre default runsets
+# Essentially redundant since they are also set by the loadCalibreInteractive.il
+## setenv MGC_CALIBRE_DRC_RUNSET_FILE "../calibre/drc/runset.drc"
+## setenv MGC_CALIBRE_LVS_RUNSET_FILE "../calibre/lvs/runset.lvs"
+## setenv MGC_CALIBRE_PEX_RUNSET_FILE "../calibre/pex/runset.pex"
+
+
+## Determine the tool to startup 
+switch ($1)
+  case 615:
+     set CMD = "cds_ic6-15.132 -license er  virtuoso"
+     breaksw
+  case 616:
+     set CMD = "cds_ic6-16.100 -license er  virtuoso"
+     breaksw
+  case xterm:
+     set CMD = "cds_ic6-16.100 -license er  xterm"
+     breaksw
+
+## this is the command that runs as default, it can be adjusted to whatever you
+## please
+default:
+     set CMD = "cds_ic6-16.100 -license er virtuoso"
+     breaksw
+endsw  
+
+echo "Running $CMD"
+$CMD

@@ -1,0 +1,1 @@
+set project_name shift_reg_chain

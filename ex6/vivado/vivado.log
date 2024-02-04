@@ -1,0 +1,526 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Jan 27 17:09:35 2024
+# Process ID: 23683
+# Current directory: /home/vlsi1_010hs23/ex6/vivado
+# Command line: vivado
+# Log file: /home/vlsi1_010hs23/ex6/vivado/vivado.log
+# Journal file: /home/vlsi1_010hs23/ex6/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/vlsi1_010hs23/ex6/vivado/ex6.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/vlsi1_010hs23/ex6/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/pack/vivado-2017.2-kgf/Vivado/2017.2/data/ip'.
+open_bd_design {/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd}
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - concat
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_vde
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_hsync
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_vsync
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_r
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_g
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_b
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - concat_rgb
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_gen
+Adding cell -- user.org:module_ref:rst_gen_wrap:1.0 - rst_gen
+Adding cell -- digilentinc.com:ip:dvi2rgb:1.9 - dvi2rgb
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - concat_rgb
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_r
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_hsync
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_vsync
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_vde
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_g
+Adding cell -- xilinx.com:ip:xlslice:1.0 - slice_b
+INFO: [BD 41-1731] Type mismatch between connected pins: /hdmi_rx/clk_gen/clk_out2(clk) and /hdmi_rx/rst_gen/clk_i(undef)
+INFO: [BD 41-1731] Type mismatch between connected pins: /hdmi_rx/rst_gen/rst_no(undef) and /hdmi_rx/dvi2rgb/aRst_n(rst)
+Successfully read diagram <zybo_top> from BD file </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd>
+update_compile_order -fileset sources_1
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+regenerate_bd_layout
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_tx]
+save_bd_design
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+launch_runs synth_1 -jobs 8
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/hdmi_rx/ready_i
+/hdmi_tx/valid_i
+
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.v
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top_wrapper.v
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/rgb2dvi .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/clk_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rst_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/dvi2rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_b .
+Exporting to file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top.hwh
+Generated Block Design Tcl file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top_bd.tcl
+Generated Hardware Definition File /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.hwdef
+[Sat Jan 27 17:19:29 2024] Launched synth_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Sat Jan 27 17:20:47 2024] Launched impl_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+reset_run synth_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /fifo_generator_0Executing the post_config_ip from bd
+endgroup
+set_property name rx_dc_fifo [get_bd_cells fifo_generator_0]
+delete_bd_objs [get_bd_cells rx_dc_fifo]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 hdmi_rx/fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /hdmi_rx/fifo_generator_0Executing the post_config_ip from bd
+endgroup
+set_property name rx_dc_fifo [get_bd_cells hdmi_rx/fifo_generator_0]
+startgroup
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Input_Data_Width {27} CONFIG.Input_Depth {512} CONFIG.Output_Data_Width {27} CONFIG.Output_Depth {512} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Use_Dout_Reset {false} CONFIG.Data_Count_Width {9} CONFIG.Write_Data_Count_Width {9} CONFIG.Read_Data_Count_Width {9} CONFIG.Full_Threshold_Assert_Value {505} CONFIG.Full_Threshold_Negate_Value {504} CONFIG.Empty_Threshold_Assert_Value {5} CONFIG.Empty_Threshold_Negate_Value {6}] [get_bd_cells hdmi_rx/rx_dc_fifo]
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /hdmi_rx/rx_dc_fifoExecuting the post_config_ip from bd
+endgroup
+startgroup
+set_property -dict [list CONFIG.Read_Clock_Frequency {150} CONFIG.Write_Clock_Frequency {100} CONFIG.Full_Threshold_Assert_Value {503} CONFIG.Full_Threshold_Negate_Value {502}] [get_bd_cells hdmi_rx/rx_dc_fifo]
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /hdmi_rx/rx_dc_fifoExecuting the post_config_ip from bd
+endgroup
+set_property location {3 584 490} [get_bd_cells hdmi_rx/rx_dc_fifo]
+connect_bd_net [get_bd_pins hdmi_rx/dvi2rgb/PixelClk] [get_bd_pins hdmi_rx/rx_dc_fifo/wr_clk]
+connect_bd_net [get_bd_pins hdmi_rx/concat_rgb/dout] [get_bd_pins hdmi_rx/rx_dc_fifo/din]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/din is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+delete_bd_objs [get_bd_nets hdmi_rx/rgb_concat_dout]
+connect_bd_net [get_bd_pins hdmi_rx/concat_rgb/dout] [get_bd_pins hdmi_rx/rx_dc_fifo/din]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/din is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/dout] [get_bd_pins hdmi_rx/slice_b/Din]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/dout is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_READ
+connect_bd_net [get_bd_pins hdmi_rx/slice_g/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_hsync/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_r/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_vde/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/slice_vsync/Din] [get_bd_pins hdmi_rx/rx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/rd_clk] [get_bd_pins hdmi_rx/clk_gen/clk_out2]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/wr_en] [get_bd_pins hdmi_rx/dvi2rgb/aPixelClkLckd]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/wr_en is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+connect_bd_net [get_bd_pins hdmi_rx/ready_i] [get_bd_pins hdmi_rx/rx_dc_fifo/rd_en]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/rd_en is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_READ
+connect_bd_net [get_bd_pins hdmi_rx/rst_gen/rst_o] [get_bd_pins hdmi_rx/rx_dc_fifo/rst]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_rx/ready_i] -boundary_type upper
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_rx/ready_i] -boundary_type upper'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 hdmi_tx/fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /hdmi_tx/fifo_generator_0Executing the post_config_ip from bd
+endgroup
+set_property name tx_dc_fifo [get_bd_cells hdmi_tx/fifo_generator_0]
+startgroup
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Input_Data_Width {27} CONFIG.Input_Depth {512} CONFIG.Read_Clock_Frequency {100} CONFIG.Write_Clock_Frequency {150} CONFIG.Output_Data_Width {27} CONFIG.Output_Depth {512} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Use_Dout_Reset {false} CONFIG.Data_Count_Width {9} CONFIG.Write_Data_Count_Width {9} CONFIG.Read_Data_Count_Width {9} CONFIG.Full_Threshold_Assert_Value {500} CONFIG.Full_Threshold_Negate_Value {499} CONFIG.Empty_Threshold_Assert_Value {5} CONFIG.Empty_Threshold_Negate_Value {6}] [get_bd_cells hdmi_tx/tx_dc_fifo]
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /hdmi_tx/tx_dc_fifoExecuting the post_config_ip from bd
+endgroup
+delete_bd_objs [get_bd_nets hdmi_tx/concat_dout]
+connect_bd_net [get_bd_pins hdmi_tx/concat/dout] [get_bd_pins hdmi_tx/tx_dc_fifo/din]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_tx/tx_dc_fifo/din is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+connect_bd_net [get_bd_pins hdmi_tx/tx_dc_fifo/dout] [get_bd_pins hdmi_tx/slice_b/Din]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_tx/tx_dc_fifo/dout is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_READ
+connect_bd_net [get_bd_pins hdmi_tx/slice_g/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_r/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_hsync/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_vsync/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/slice_vde/Din] [get_bd_pins hdmi_tx/tx_dc_fifo/dout]
+connect_bd_net [get_bd_pins hdmi_tx/rst_i] [get_bd_pins hdmi_tx/tx_dc_fifo/rst]
+connect_bd_net [get_bd_pins hdmi_tx/proc_clk_i] [get_bd_pins hdmi_tx/tx_dc_fifo/wr_clk]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_clk_i] [get_bd_pins hdmi_tx/tx_dc_fifo/rd_clk]
+connect_bd_net [get_bd_pins hdmi_tx/hdmi_rst_ni] [get_bd_pins hdmi_tx/tx_dc_fifo/rd_en]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_tx/tx_dc_fifo/rd_en is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_READ
+connect_bd_net [get_bd_pins hdmi_tx/valid_i] [get_bd_pins hdmi_tx/tx_dc_fifo/wr_en]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_tx/tx_dc_fifo/wr_en is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 hdmi_tx/util_vector_logic_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells hdmi_tx/util_vector_logic_0]
+endgroup
+set_property name not_full [get_bd_cells hdmi_tx/util_vector_logic_0]
+connect_bd_net [get_bd_pins hdmi_tx/tx_dc_fifo/full] [get_bd_pins hdmi_tx/not_full/Op1]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_tx/tx_dc_fifo/full is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_tx/not_full/Res]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_tx]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 hdmi_rx/util_vector_logic_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells hdmi_rx/util_vector_logic_0]
+endgroup
+set_property name not_empty [get_bd_cells hdmi_rx/util_vector_logic_0]
+set_property location {2 602 676} [get_bd_cells hdmi_rx/not_empty]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/empty] [get_bd_pins hdmi_rx/not_empty/Op1]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/empty is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_READ
+connect_bd_net [get_bd_pins hdmi_rx/valid_o] [get_bd_pins hdmi_rx/not_empty/Res]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+save_bd_design
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+connect_bd_net [get_bd_pins hdmi_rx/valid_o] [get_bd_pins hdmi_tx/valid_i] -boundary_type upper
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins hdmi_rx/ready_i] -boundary_type upper
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells xlconcat_0]
+regenerate_bd_layout -hierarchy [get_bd_cell hdmi_rx]
+startgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3} CONFIG.IN1_WIDTH {2}] [get_bd_cells xlconcat_0]
+endgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/In3] [get_bd_pins hdmi_tx/tx_dc_fifo/full]
+connect_bd_net [get_bd_pins xlconcat_0/In2] [get_bd_pins hdmi_tx/tx_dc_fifo/empty]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_tx/tx_dc_fifo/empty is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_READ
+delete_bd_objs [get_bd_nets hdmi_tx_full]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets hdmi_tx_full]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins xlconcat_0/In2] [get_bd_pins hdmi_tx/tx_dc_fifo/empty]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins xlconcat_0/In3] [get_bd_pins hdmi_tx/tx_dc_fifo/full]'
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins hdmi_tx/tx_dc_fifo/full]
+connect_bd_net [get_bd_pins hdmi_rx/rx_dc_fifo/full] [get_bd_pins xlconcat_0/In3]
+INFO: [BD 41-1306] The connection to interface pin /hdmi_rx/rx_dc_fifo/full is being overridden by the user. This pin will not be connected as a part of interface connection FIFO_WRITE
+startgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3}] [get_bd_cells xlconcat_0]
+WARNING: [BD 41-1684] Pin /xlconcat_0/In3 is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets hdmi_rx_full]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/In2] [get_bd_pins hdmi_rx/full]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {2} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xlconcat_0/In1]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.v
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top_wrapper.v
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/rgb2dvi .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/clk_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rst_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/dvi2rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/tx_dc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/not_full .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rx_dc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/not_empty .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+Exporting to file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top.hwh
+Generated Block Design Tcl file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top_bd.tcl
+Generated Hardware Definition File /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.hwdef
+[Sat Jan 27 18:09:01 2024] Launched synth_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/synth_1/runme.log
+[Sat Jan 27 18:09:01 2024] Launched impl_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/impl_1/runme.log
+regenerate_bd_layout
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper_board.xdc]
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper_board.xdc]
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ip/zybo_top_clk_gen_0/zybo_top_clk_gen_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ip/zybo_top_clk_gen_0/zybo_top_clk_gen_0.xdc:57]
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper_early.xdc]
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper.xdc]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:18]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:18]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:28]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper.xdc]
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper_late.xdc]
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp5/zybo_top_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 7348.664 ; gain = 1.000 ; free physical = 24232 ; free virtual = 73733
+Restored from archive | CPU: 0.040000 secs | Memory: 1.526260 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 7348.664 ; gain = 1.000 ; free physical = 24232 ; free virtual = 73733
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 6 instances
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 7537.039 ; gain = 927.852 ; free physical = 24129 ; free virtual = 73626
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+close_design
+create_bd_cell -type module -reference rgb_proc_wrap rgb_proc_wrap_0
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/vlsi1_010hs23/ex6/vivado/ip_repo'.
+set_property location {1 69 308} [get_bd_cells rgb_proc_wrap_0]
+connect_bd_net [get_bd_pins hdmi_rx/rst_no] [get_bd_pins rgb_proc_wrap_0/rst_ni]
+startgroup
+connect_bd_net [get_bd_pins hdmi_rx/proc_clk_o] [get_bd_pins rgb_proc_wrap_0/clk_i]
+endgroup
+delete_bd_objs [get_bd_nets r_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/r_o] [get_bd_pins rgb_proc_wrap_0/r_i]
+delete_bd_objs [get_bd_nets g_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/g_o] [get_bd_pins rgb_proc_wrap_0/g_i]
+delete_bd_objs [get_bd_nets b_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/b_o] [get_bd_pins rgb_proc_wrap_0/b_i]
+delete_bd_objs [get_bd_nets vsync_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/vsync_o] [get_bd_pins rgb_proc_wrap_0/vsync_i]
+delete_bd_objs [get_bd_nets hsync_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/hsync_o] [get_bd_pins rgb_proc_wrap_0/hsync_i]
+delete_bd_objs [get_bd_nets vde_i_1]
+connect_bd_net [get_bd_pins hdmi_rx/vde_o] [get_bd_pins rgb_proc_wrap_0/vde_i]
+delete_bd_objs [get_bd_nets hdmi_rx_valid_o]
+connect_bd_net [get_bd_pins hdmi_rx/valid_o] [get_bd_pins rgb_proc_wrap_0/valid_i]
+delete_bd_objs [get_bd_nets hdmi_tx_ready_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/ready_o] [get_bd_pins hdmi_rx/ready_i]
+connect_bd_net [get_bd_pins hdmi_tx/ready_o] [get_bd_pins rgb_proc_wrap_0/ready_i]
+connect_bd_net [get_bd_pins hdmi_tx/r_i] [get_bd_pins rgb_proc_wrap_0/r_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/g_o] [get_bd_pins hdmi_tx/g_i]
+connect_bd_net [get_bd_pins hdmi_tx/b_i] [get_bd_pins rgb_proc_wrap_0/b_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/hsync_o] [get_bd_pins hdmi_tx/hsync_i]
+connect_bd_net [get_bd_pins hdmi_tx/vsync_i] [get_bd_pins rgb_proc_wrap_0/vsync_o]
+connect_bd_net [get_bd_pins rgb_proc_wrap_0/vde_o] [get_bd_pins hdmi_tx/vde_i]
+connect_bd_net [get_bd_pins hdmi_tx/valid_i] [get_bd_pins rgb_proc_wrap_0/valid_o]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property name concat_led [get_bd_cells xlconcat_0]
+set_property name constant_0 [get_bd_cells xlconstant_0]
+set_property name slice_switch [get_bd_cells xlslice_0]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {3} CONFIG.DIN_FROM {3} CONFIG.DIN_WIDTH {4} CONFIG.DIN_FROM {3} CONFIG.DOUT_WIDTH {1}] [get_bd_cells slice_switch]
+endgroup
+set_property name slice_enable [get_bd_cells slice_switch]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property name slice_switch [get_bd_cells xlslice_0]
+startgroup
+set_property -dict [list CONFIG.DIN_FROM {2} CONFIG.DIN_WIDTH {4} CONFIG.DIN_TO {0} CONFIG.DOUT_WIDTH {3}] [get_bd_cells slice_switch]
+endgroup
+connect_bd_net [get_bd_ports switch_i] [get_bd_pins slice_enable/Din]
+connect_bd_net [get_bd_ports switch_i] [get_bd_pins slice_switch/Din]
+connect_bd_net [get_bd_pins slice_enable/Dout] [get_bd_pins rgb_proc_wrap_0/enable_i]
+connect_bd_net [get_bd_pins slice_switch/Dout] [get_bd_pins rgb_proc_wrap_0/switch_i]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.v
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top_wrapper.v
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/rgb2dvi .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/clk_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rst_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/dvi2rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/tx_dc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/not_full .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rx_dc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/not_empty .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block concat_led .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block constant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb_proc_wrap_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slice_enable .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slice_switch .
+Exporting to file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top.hwh
+Generated Block Design Tcl file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top_bd.tcl
+Generated Hardware Definition File /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.hwdef
+[Sat Jan 27 18:17:42 2024] Launched synth_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/synth_1/runme.log
+[Sat Jan 27 18:17:42 2024] Launched impl_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/impl_1/runme.log
+reset_run synth_1
+connect_bd_net [get_bd_ports led_o] [get_bd_pins concat_led/dout]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+launch_runs impl_1 -jobs 8
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/zybo_top.bd> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.v
+Verilog Output written to : /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top_wrapper.v
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_f9444f62.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4ccc4b.ui> 
+Wrote  : </home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ui/bd_bb4eccc9.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/rgb2dvi .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/clk_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rst_gen .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/dvi2rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/concat_rgb .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_hsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vsync .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_vde .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_g .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/slice_b .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/tx_dc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx/not_full .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/rx_dc_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx/not_empty .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block concat_led .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block constant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb_proc_wrap_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slice_enable .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slice_switch .
+Exporting to file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top.hwh
+Generated Block Design Tcl file /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hw_handoff/zybo_top_bd.tcl
+Generated Hardware Definition File /home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/hdl/zybo_top.hwdef
+[Sat Jan 27 18:18:15 2024] Launched synth_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/synth_1/runme.log
+[Sat Jan 27 18:18:16 2024] Launched impl_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex6/vivado/ex6.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper_board.xdc]
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper_board.xdc]
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ip/zybo_top_clk_gen_0/zybo_top_clk_gen_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vlsi1_010hs23/ex6/vivado/ex6.srcs/sources_1/bd/zybo_top/ip/zybo_top_clk_gen_0/zybo_top_clk_gen_0.xdc:57]
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper_early.xdc]
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper.xdc]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:18]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:18]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:28]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex6/vivado/constraints/zybo-z7.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper.xdc]
+Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper_late.xdc]
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex6/vivado/.Xil/Vivado-23683-tardis-c03/dcp7/zybo_top_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 7629.203 ; gain = 0.000 ; free physical = 24064 ; free virtual = 73565
+Restored from archive | CPU: 0.060000 secs | Memory: 2.315956 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 7629.203 ; gain = 0.000 ; free physical = 24064 ; free virtual = 73565
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 6 instances
+
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 27 18:21:05 2024...

@@ -1,0 +1,2 @@
+Use the makefile in order to generate the test vectors for the traffic
+light FSM out of the Java file located in the 'src' directory.

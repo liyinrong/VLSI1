@@ -1,0 +1,300 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date             : Sat Jan 27 18:19:33 2024
+| Host             : tardis-c03 running 64-bit Debian GNU/Linux 10 (buster)
+| Command          : report_power -file zybo_top_wrapper_power_routed.rpt -pb zybo_top_wrapper_power_summary_routed.pb -rpx zybo_top_wrapper_power_routed.rpx
+| Design           : zybo_top_wrapper
+| Device           : xc7z020clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 0.539 |
+| Dynamic (W)              | 0.413 |
+| Device Static (W)        | 0.126 |
+| Effective TJA (C/W)      | 11.5  |
+| Max Ambient (C)          | 78.8  |
+| Junction Temperature (C) | 31.2  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.021 |       19 |       --- |             --- |
+| Slice Logic              |     0.006 |     2514 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     1015 |     53200 |            1.91 |
+|   Register               |    <0.001 |     1233 |    106400 |            1.16 |
+|   CARRY4                 |    <0.001 |       43 |     13300 |            0.32 |
+|   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
+|   Others                 |    <0.001 |      119 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |       25 |     53200 |            0.05 |
+|   LUT as Shift Register  |    <0.001 |        2 |     17400 |            0.01 |
+| Signals                  |     0.007 |     1959 |       --- |             --- |
+| Block RAM                |     0.010 |        1 |       140 |            0.71 |
+| MMCM                     |     0.200 |        2 |         4 |           50.00 |
+| PLL                      |     0.118 |        1 |         4 |           25.00 |
+| I/O                      |     0.052 |       28 |       125 |           22.40 |
+| Static Power             |     0.126 |          |           |                 |
+| Total                    |     0.539 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.075 |       0.066 |      0.009 |
+| Vccaux    |       1.800 |     0.205 |       0.186 |      0.019 |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.001 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.019 |       0.000 |      0.019 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------------------------+--------------------------------------------------------------------------+-----------------+
+| Clock                         | Domain                                                                   | Constraint (ns) |
++-------------------------------+--------------------------------------------------------------------------+-----------------+
+| CLKFBIN                       | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/CLKFBIN                     |             6.1 |
+| CLKFBIN_1                     | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/CLKFBIN         |             6.1 |
+| CLK_OUT_5x_hdmi_clk           | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk         |             1.2 |
+| FeedbackClkOut                | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/FeedbackClkOut  |             6.1 |
+| PixelClkIO                    | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/hdmi_tx_clk_n_o |             6.1 |
+| PixelClkInX5                  | zybo_top_i/hdmi_tx/rgb2dvi/U0/ClockGenInternal.ClockGenX/PixelClkInX5    |             1.2 |
+| PixelClk_int                  | zybo_top_i/hdmi_rx/dvi2rgb/U0/TMDS_ClockingX/oSyncStages_reg[1]          |             6.1 |
+| clk_i                         | clk_i                                                                    |             8.0 |
+| clk_out1_zybo_top_clk_gen_0   | zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                                 |             5.0 |
+| clk_out1_zybo_top_clk_gen_0   | zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1_zybo_top_clk_gen_0              |             5.0 |
+| clk_out1_zybo_top_clk_gen_0_1 | zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1                                 |             5.0 |
+| clk_out1_zybo_top_clk_gen_0_1 | zybo_top_i/hdmi_rx/clk_gen/inst/clk_out1_zybo_top_clk_gen_0              |             5.0 |
+| clk_out2_zybo_top_clk_gen_0   | zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2_zybo_top_clk_gen_0              |             6.7 |
+| clk_out2_zybo_top_clk_gen_0_1 | zybo_top_i/hdmi_rx/clk_gen/inst/clk_out2_zybo_top_clk_gen_0              |             6.7 |
+| clkfbout_zybo_top_clk_gen_0   | zybo_top_i/hdmi_rx/clk_gen/inst/clkfbout_zybo_top_clk_gen_0              |            40.0 |
+| clkfbout_zybo_top_clk_gen_0_1 | zybo_top_i/hdmi_rx/clk_gen/inst/clkfbout_zybo_top_clk_gen_0              |            40.0 |
+| hdmi_rx_clk_p_i               | hdmi_rx_clk_p_i                                                          |             6.1 |
+| sys_clk                       | clk_i                                                                    |             8.0 |
++-------------------------------+--------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------+-----------+
+| Name                                           | Power (W) |
++------------------------------------------------+-----------+
+| zybo_top_wrapper                               |     0.413 |
+|   hdmi_rx_ddc_scl_iobuf                        |     0.000 |
+|   hdmi_rx_ddc_sda_iobuf                        |     0.000 |
+|   zybo_top_i                                   |     0.409 |
+|     concat_led                                 |     0.000 |
+|     constant_0                                 |     0.000 |
+|     hdmi_rx                                    |     0.272 |
+|       clk_gen                                  |     0.118 |
+|         inst                                   |     0.118 |
+|       concat_rgb                               |     0.000 |
+|       dvi2rgb                                  |     0.149 |
+|         U0                                     |     0.149 |
+|           DataDecoders[0].DecoderX             |     0.014 |
+|             ChannelBondX                       |    <0.001 |
+|               pFIFO_reg_0_31_0_5               |    <0.001 |
+|               pFIFO_reg_0_31_6_9               |    <0.001 |
+|             InputSERDES_X                      |     0.011 |
+|             PhaseAlignX                        |     0.001 |
+|             SyncBaseOvf                        |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|             SyncBaseRst                        |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|           DataDecoders[1].DecoderX             |     0.014 |
+|             ChannelBondX                       |    <0.001 |
+|               pFIFO_reg_0_31_0_5               |    <0.001 |
+|               pFIFO_reg_0_31_6_9               |    <0.001 |
+|             InputSERDES_X                      |     0.011 |
+|             PhaseAlignX                        |     0.002 |
+|             SyncBaseOvf                        |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|             SyncBaseRst                        |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|           DataDecoders[2].DecoderX             |     0.014 |
+|             ChannelBondX                       |    <0.001 |
+|               pFIFO_reg_0_31_0_5               |    <0.001 |
+|               pFIFO_reg_0_31_6_9               |    <0.001 |
+|             InputSERDES_X                      |     0.011 |
+|             PhaseAlignX                        |     0.001 |
+|             SyncBaseOvf                        |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|             SyncBaseRst                        |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|           GenerateBUFG.ResyncToBUFG_X          |    <0.001 |
+|           GenerateDDC.DDC_EEPROM               |     0.002 |
+|             I2C_SlaveController                |     0.002 |
+|               GlitchF_SCL                      |    <0.001 |
+|               GlitchF_SDA                      |    <0.001 |
+|               SyncSCL                          |    <0.001 |
+|               SyncSDA                          |    <0.001 |
+|           LockLostReset                        |    <0.001 |
+|             SyncAsyncx                         |    <0.001 |
+|           TMDS_ClockingX                       |     0.103 |
+|             LockLostReset                      |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|             MMCM_LockSync                      |    <0.001 |
+|             RdyLostReset                       |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|       not_empty                                |     0.000 |
+|       rst_gen                                  |    <0.001 |
+|         inst                                   |    <0.001 |
+|           i_rst_gen                            |    <0.001 |
+|       rx_dc_fifo                               |     0.005 |
+|         U0                                     |     0.005 |
+|           inst_fifo_gen                        |     0.005 |
+|             gconvfifo.rf                       |     0.005 |
+|               gbi.bi                           |     0.005 |
+|                 g7ser_birst.rstbt              |    <0.001 |
+|                 v7_bi_fifo.fblk                |     0.005 |
+|                   gextw[1].gnll_fifo.inst_extd |     0.005 |
+|                     gonep.inst_prim            |     0.005 |
+|       slice_b                                  |     0.000 |
+|       slice_g                                  |     0.000 |
+|       slice_hsync                              |     0.000 |
+|       slice_r                                  |     0.000 |
+|       slice_vde                                |     0.000 |
+|       slice_vsync                              |     0.000 |
+|     hdmi_tx                                    |     0.131 |
+|       concat                                   |     0.000 |
+|       concat_rgb                               |     0.000 |
+|       not_full                                 |     0.000 |
+|       rgb2dvi                                  |     0.125 |
+|         U0                                     |     0.125 |
+|           ClockGenInternal.ClockGenX           |     0.100 |
+|             LockLostReset                      |    <0.001 |
+|               SyncAsyncx                       |    <0.001 |
+|             PLL_LockSyncAsync                  |    <0.001 |
+|           ClockSerializer                      |     0.001 |
+|           DataEncoders[0].DataEncoder          |     0.003 |
+|           DataEncoders[0].DataSerializer       |     0.006 |
+|           DataEncoders[1].DataEncoder          |     0.003 |
+|           DataEncoders[1].DataSerializer       |     0.005 |
+|           DataEncoders[2].DataEncoder          |     0.003 |
+|           DataEncoders[2].DataSerializer       |     0.005 |
+|           LockLostReset                        |    <0.001 |
+|             SyncAsyncx                         |    <0.001 |
+|       slice_b                                  |     0.000 |
+|       slice_g                                  |     0.000 |
+|       slice_hsync                              |     0.000 |
+|       slice_r                                  |     0.000 |
+|       slice_vde                                |     0.000 |
+|       slice_vsync                              |     0.000 |
+|       tx_dc_fifo                               |     0.006 |
+|         U0                                     |     0.006 |
+|           inst_fifo_gen                        |     0.006 |
+|             gconvfifo.rf                       |     0.006 |
+|               gbi.bi                           |     0.006 |
+|                 g7ser_birst.rstbt              |    <0.001 |
+|                 v7_bi_fifo.fblk                |     0.006 |
+|                   gextw[1].gnll_fifo.inst_extd |     0.006 |
+|                     gonep.inst_prim            |     0.006 |
+|     rgb_proc_wrap_0                            |     0.006 |
+|       inst                                     |     0.006 |
+|         i_ff_oup_reg                           |    <0.001 |
+|           i_spill_register                     |    <0.001 |
+|         i_ff_shim_reg                          |    <0.001 |
+|         i_ff_shim_reg2                         |    <0.001 |
+|         i_inp_reg                              |    <0.001 |
+|           i_spill_register                     |    <0.001 |
+|         i_oup_reg                              |    <0.001 |
+|           i_spill_register                     |    <0.001 |
+|         i_proc_oup_reg                         |    <0.001 |
+|           i_spill_register                     |    <0.001 |
+|         i_proc_rt_inp_reg                      |    <0.001 |
+|         i_proc_rt_oup_reg                      |     0.002 |
+|         i_rgb_proc                             |    <0.001 |
+|           i_rgb_grayscaler                     |    <0.001 |
+|     slice_enable                               |     0.000 |
+|     slice_switch                               |     0.000 |
++------------------------------------------------+-----------+
+
+

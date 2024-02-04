@@ -1,0 +1,6 @@
+../sourcecode/tb/clk_rst_gen.sv
+../sourcecode/tb/rst_gen.sv
+../sourcecode/tb/tb_shiftreg.sv
+../sourcecode/tb/tb_lutchain.sv
+../sourcecode/tb/tb_simple_fsm.sv
+../sourcecode/tb/tb_simpler_fsm.sv

@@ -1,0 +1,20 @@
+*lvsRulesFile: /usr/pack/umc-65-kgf/dz/calibre/2011.2/lvs/G-DF-LOGIC_MIXED_MODE65N-LL_LOW_K_CALIBRE-LVS-1.4-P1.txt
+*lvsRunDir: ../calibre/lvs
+*lvsLayoutPaths: chip.calibre.gds
+*lvsLayoutPrimary: chip
+*lvsSourcePath: chip.src.net
+*lvsSourcePrimary: chip
+*lvsReportFile: chip.lvs.report
+*lvsSpiceFile: chip.lay.net
+*lvsPowerNames: VDD?
+*lvsGroundNames: VSS?
+*lvsRecognizeGates: NONE
+*lvsIsolateShorts: 1
+*lvsRunERC: 0
+*lvsIncludeFiles: /usr/pack/umc-65-kgf/dz/calibre/2011.2/lvs/lvs_options.txt ./lvs_labels.txt
+*lvsTemplate_ES: %l.lay.net
+*cmnShowOptions: 1
+*cmnRunMT: 1
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0
+

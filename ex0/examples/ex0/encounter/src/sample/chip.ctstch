@@ -1,0 +1,125 @@
+#
+# Encounter(R) Clock Synthesis Technology File Format
+#
+
+
+#
+# This is an example file, adapt it for your design !!!
+#
+
+
+#-- MacroModel --
+#MacroModel pin <pin> <maxRiseDelay> <minRiseDelay> <maxFallDelay> <minFallDelay> <inputCap>
+
+#-- Special Route Type --
+#RouteTypeName specialRoute
+#TopPreferredLayer 4
+#BottomPreferredLayer 3
+#PreferredExtraSpace 1
+#End
+
+#-- Regular Route Type --
+RouteTypeName regularRoute
+TopPreferredLayer 8
+BottomPreferredLayer 1
+PreferredExtraSpace 0
+End
+
+#-- Clock Group --
+#ClkGroup
+#+ <clockName>
+
+#-- Nanoroute follows CTS route guide (for RouteClkNet YES) --
+#UseCTSRouteGuide    YES
+
+#------------------------------------------------------------
+# clock tree  (tight constraints)
+#
+# For (very) small trees "MaxFanout" might be useful to get 
+# some more buffers and reduce the impact of (clock tree)
+# routing.
+#
+# For the best results (but worse overall routability) the clock
+# net can be routed during CTS ("RouteClkNet  YES"). To get an
+# optimally balanced routing also set "UseCTSRouteGuide YES".
+#------------------------------------------------------------
+AutoCTSRootPin Clk_CI
+#Period         10ns
+MaxDelay       1ns
+MinDelay       0ns
+MaxSkew        150ps
+SinkMaxTran    350ps
+BufMaxTran     250ps
+#Buffer         BUFM2W BUFM4W BUFM3W BUFM6W BUFM5W BUFM8W BUFM10W BUFM12W BUFM14W BUFM16W BUFM18W BUFM22WA BUFM20W BUFM24W BUFM26WA BUFM32WA BUFM40WA BUFM48WA CKBUFM2W CKBUFM1W CKBUFM4W CKBUFM3W CKBUFM6W CKBUFM8W CKBUFM12W CKBUFM16W CKBUFM20W CKBUFM22WA CKBUFM24W CKBUFM26WA CKBUFM32W CKBUFM40W CKBUFM48W CKINVM2W CKINVM1W CKINVM4W CKINVM3W CKINVM6W CKINVM8W CKINVM12W CKINVM16W CKINVM20W CKINVM22WA CKINVM24W CKINVM26WA CKINVM32W CKINVM40W CKINVM48W INVM2W INVM1W INVM4W INVM3W INVM6W INVM5W INVM8W INVM10W INVM12W INVM14W INVM16W INVM18W INVM20W INVM22WA INVM24W INVM26WA INVM32W INVM40W INVM48W
+Buffer         CKBUFM3W CKBUFM4W CKBUFM6W CKBUFM8W CKBUFM12W CKBUFM16W CKBUFM20W CKBUFM22WA CKBUFM24W CKBUFM26WA CKBUFM32W CKBUFM40W CKBUFM48W CKINVM3W CKINVM4W CKINVM6W CKINVM8W CKINVM12W CKINVM16W CKINVM20W CKINVM22WA CKINVM24W CKINVM26WA CKINVM32W CKINVM40W CKINVM48W
+#MaxFanout      32
+#AddDriverCell CKBUFM12W
+NoGating       NO
+DetailReport   YES
+#SetDPinAsSync       NO
+#SetIoPinAsSync      NO
+#SetASyncSRPinAsSync NO
+#SetTriStEnPinAsSync NO
+#SetBBoxPinAsSync    NO
+RouteClkNet    NO
+PostOpt        YES
+OptAddBuffer   YES
+#RouteType      specialRoute
+#LeafRouteType  regularRoute
+ThroughPin
+END
+
+#------------------------------------------------------------
+# reset tree  (loose constraints)
+#------------------------------------------------------------
+AutoCTSRootPin Reset_RBI
+#Period         10ns
+MaxDelay       3ns
+MinDelay       0ns
+MaxSkew        3ns
+SinkMaxTran    0.56ns
+BufMaxTran     0.56ns
+Buffer         BUFM2W BUFM4W BUFM3W BUFM6W BUFM5W BUFM8W BUFM10W BUFM12W BUFM14W BUFM16W BUFM18W BUFM22WA BUFM20W BUFM24W BUFM26WA BUFM32WA BUFM40WA BUFM48WA CKBUFM2W CKBUFM1W CKBUFM4W CKBUFM3W CKBUFM6W CKBUFM8W CKBUFM12W CKBUFM16W CKBUFM20W CKBUFM22WA CKBUFM24W CKBUFM26WA CKBUFM32W CKBUFM40W CKBUFM48W CKINVM2W CKINVM1W CKINVM4W CKINVM3W CKINVM6W CKINVM8W CKINVM12W CKINVM16W CKINVM20W CKINVM22WA CKINVM24W CKINVM26WA CKINVM32W CKINVM40W CKINVM48W INVM2W INVM1W INVM4W INVM3W INVM6W INVM5W INVM8W INVM10W INVM12W INVM14W INVM16W INVM18W INVM20W INVM22WA INVM24W INVM26WA INVM32W INVM40W INVM48W
+#MaxFanout      32
+#NoGating       NO
+DetailReport   YES
+#SetDPinAsSync       NO
+#SetIoPinAsSync      NO
+SetASyncSRPinAsSync YES
+#SetTriStEnPinAsSync NO
+#SetBBoxPinAsSync    NO
+RouteClkNet    NO
+#PostOpt        NO
+#OptAddBuffer   NO
+RouteType      regularRoute
+LeafRouteType  regularRoute
+ThroughPin
+END
+
+#------------------------------------------------------------
+# scan enable tree  (loose constraints)
+#------------------------------------------------------------
+AutoCTSRootPin ScanEn_TI
+#Period         10ns
+MaxDelay       3ns
+MinDelay       0ns
+MaxSkew        3ns
+SinkMaxTran    0.56ns
+BufMaxTran     0.56ns
+Buffer         BUFM2W BUFM4W BUFM3W BUFM6W BUFM5W BUFM8W BUFM10W BUFM12W BUFM14W BUFM16W BUFM18W BUFM22WA BUFM20W BUFM24W BUFM26WA BUFM32WA BUFM40WA BUFM48WA CKBUFM2W CKBUFM1W CKBUFM4W CKBUFM3W CKBUFM6W CKBUFM8W CKBUFM12W CKBUFM16W CKBUFM20W CKBUFM22WA CKBUFM24W CKBUFM26WA CKBUFM32W CKBUFM40W CKBUFM48W CKINVM2W CKINVM1W CKINVM4W CKINVM3W CKINVM6W CKINVM8W CKINVM12W CKINVM16W CKINVM20W CKINVM22WA CKINVM24W CKINVM26WA CKINVM32W CKINVM40W CKINVM48W INVM2W INVM1W INVM4W INVM3W INVM6W INVM5W INVM8W INVM10W INVM12W INVM14W INVM16W INVM18W INVM20W INVM22WA INVM24W INVM26WA INVM32W INVM40W INVM48W
+#MaxFanout      30
+#NoGating       NO
+DetailReport   YES
+SetDPinAsSync       YES
+#SetIoPinAsSync      NO
+#SetASyncSRPinAsSync NO
+#SetTriStEnPinAsSync NO
+#SetBBoxPinAsSync    NO
+RouteClkNet    NO
+#PostOpt        NO
+#OptAddBuffer   NO
+RouteType      regularRoute
+LeafRouteType  regularRoute
+ThroughPin
+END
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="filter_hls.cpp" path="/home/vlsi1_010hs23/ex7/cpp/filter_hls.cpp"/>
+    <originFiles name="filter_hls.h" path="/home/vlsi1_010hs23/ex7/cpp/filter_hls.h"/>
+  </source>
+  <testbench>
+    <originFiles name="filter_app.cpp" path="/home/vlsi1_010hs23/ex7/cpp/filter_app.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,4 @@
+../sourcecode/rgb_grayscaler.sv
+../sourcecode/rgb_saturator.sv
+../sourcecode/rgb_top_wrap.sv
+../sourcecode/surrounding_modules/spill_register.sv

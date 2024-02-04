@@ -1,0 +1,16 @@
+/*.cache
+/*.hw
+/*.ioplanning
+/*.ip_user_files
+/*.runs
+/*.sim
+/*.srcs
+/*.xpr
+/*.data
+
+/vivado*.jou
+/vivado*.log
+/vivado_pid*.str
+/vivado_pid*.zip
+
+/.Xil

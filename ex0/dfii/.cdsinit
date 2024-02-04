@@ -1,0 +1,27 @@
+printf("DZ: BEGIN OF LOCAL CUSTOMIZATION LOADING\n")
+
+let( ( localLibPath addon addonsL )
+
+  localLibPath = "./.init/"
+
+  addonsL = '(
+               "loadKit.il"
+               "loadBindKeys.il"
+               "loadCalibreInteractive.il"
+               "loadUserCust.il"
+             )
+
+  foreach( addon addonsL
+    if( isFile( strcat( localLibPath addon ) ) then
+        load( strcat( localLibPath addon ) )
+    else
+        printf( "DZ: ERROR: load '%s' -> no such file!\n" strcat( localLibPath addon ) )
+    )
+  );foreach
+);let
+; This should prevent that the processes that are spawned from
+; ic6 do not get a priority 10 which clashes with condor jobs 
+ipcSetPriority(1)
+
+printf("DZ: END OF LOCAL CUSTOMIZATION LOADING\n")
+

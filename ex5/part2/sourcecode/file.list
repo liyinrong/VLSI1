@@ -1,0 +1,13 @@
+../sourcecode/stage.sv
+../sourcecode/stage5.sv
+../sourcecode/stage7.sv
+../sourcecode/stage9.sv
+../sourcecode/stage11.sv
+../sourcecode/shiftreg_pkg.sv
+../sourcecode/shiftreg.sv
+../sourcecode/lut.sv
+../sourcecode/lutchain.sv
+../sourcecode/datapath.sv
+../sourcecode/fsm.sv
+../sourcecode/simple_fsm.sv
+../sourcecode/simpler_fsm.sv

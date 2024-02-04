@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_b_V_2_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.399+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_g_V_2_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.391+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_r_V_2_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.383+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_b_V_1_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.374+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_g_V_1_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.366+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_r_V_1_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.358+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_b_V_0_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.350+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_g_V_0_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.342+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_r_V_0_1' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.334+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_b_V_2_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.326+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_g_V_2_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.318+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_r_V_2_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.308+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_b_V_1_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.300+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_g_V_1_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.292+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_r_V_1_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.284+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_b_V_0_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.276+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_g_V_0_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.268+0000" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'window_r_V_0_2' is power-on initialization." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.260+0000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xA;&#x9;'phi' operation ('x') with incoming values : ('x', ../cpp/filter_hls.cpp:55) (0 ns)&#xA;&#x9;'icmp' operation ('exitcond', ../cpp/filter_hls.cpp:55) (2.94 ns)&#xA;&#x9;'select' operation ('x_mid2', ../cpp/filter_hls.cpp:55) (2.07 ns)&#xA;&#x9;'icmp' operation ('tmp_5', ../cpp/filter_hls.cpp:62) (2.94 ns)&#xA;&#x9;'and' operation ('or_cond', ../cpp/filter_hls.cpp:76) (2.07 ns)&#xA;&#x9;blocking operation 4.14 ns on control path)" projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.064+0000" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (14.2ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns)." projectName="filter" solutionName="solution1" date="2024-01-30T15:07:50.053+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

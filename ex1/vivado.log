@@ -1,0 +1,185 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Jan 24 17:42:08 2024
+# Process ID: 830
+# Current directory: /home/vlsi1_010hs23/ex1
+# Command line: vivado
+# Log file: /home/vlsi1_010hs23/ex1/vivado.log
+# Journal file: /home/vlsi1_010hs23/ex1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project intro /home/vlsi1_010hs23/ex1/intro/vivado -part xc7z020clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/pack/vivado-2017.2-kgf/Vivado/2017.2/data/ip'.
+set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
+add_files -scan_for_includes {/home/vlsi1_010hs23/ex1/intro/sourcecode/zybo_top.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/debouncer.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/led_toggler.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/rising_edge_pulser.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/led_switcher.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/rst_gen.sv}
+add_files -fileset constrs_1 -norecurse /home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property strategy Flow_RuntimeOptimized [get_runs impl_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Jan 24 17:52:08 2024] Launched synth_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex1/intro/vivado/intro.runs/synth_1/runme.log
+[Wed Jan 24 17:52:08 2024] Launched impl_1...
+Run output will be captured here: /home/vlsi1_010hs23/ex1/intro/vivado/intro.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: zybo_top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 6193.645 ; gain = 8.000 ; free physical = 24792 ; free virtual = 70738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zybo_top' [/home/vlsi1_010hs23/ex1/intro/sourcecode/zybo_top.sv:11]
+	Parameter NumLeds bound to: 4 - type: integer 
+	Parameter NumBtns bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'debouncer' [/home/vlsi1_010hs23/ex1/intro/sourcecode/debouncer.sv:10]
+	Parameter NumCycles bound to: 5000000 - type: integer 
+	Parameter CntBitw bound to: 23 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/vlsi1_010hs23/ex1/intro/sourcecode/debouncer.sv:33]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (1#1) [/home/vlsi1_010hs23/ex1/intro/sourcecode/debouncer.sv:10]
+INFO: [Synth 8-638] synthesizing module 'rising_edge_pulser' [/home/vlsi1_010hs23/ex1/intro/sourcecode/rising_edge_pulser.sv:8]
+INFO: [Synth 8-256] done synthesizing module 'rising_edge_pulser' (2#1) [/home/vlsi1_010hs23/ex1/intro/sourcecode/rising_edge_pulser.sv:8]
+INFO: [Synth 8-638] synthesizing module 'led_switcher' [/home/vlsi1_010hs23/ex1/intro/sourcecode/led_switcher.sv:7]
+	Parameter NumLeds bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'led_switcher' (3#1) [/home/vlsi1_010hs23/ex1/intro/sourcecode/led_switcher.sv:7]
+INFO: [Synth 8-638] synthesizing module 'led_toggler' [/home/vlsi1_010hs23/ex1/intro/sourcecode/led_toggler.sv:10]
+	Parameter NumLeds bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'led_toggler' (4#1) [/home/vlsi1_010hs23/ex1/intro/sourcecode/led_toggler.sv:10]
+INFO: [Synth 8-226] default block is never used [/home/vlsi1_010hs23/ex1/intro/sourcecode/zybo_top.sv:79]
+INFO: [Synth 8-638] synthesizing module 'rst_gen' [/home/vlsi1_010hs23/ex1/intro/sourcecode/rst_gen.sv:11]
+	Parameter RstClkCycles bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rst_gen' (5#1) [/home/vlsi1_010hs23/ex1/intro/sourcecode/rst_gen.sv:11]
+INFO: [Synth 8-256] done synthesizing module 'zybo_top' (6#1) [/home/vlsi1_010hs23/ex1/intro/sourcecode/zybo_top.sv:11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 6220.895 ; gain = 35.250 ; free physical = 24809 ; free virtual = 70755
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 6220.895 ; gain = 35.250 ; free physical = 24810 ; free virtual = 70756
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:28]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 6651.574 ; gain = 465.930 ; free physical = 24458 ; free virtual = 70407
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 6651.574 ; gain = 465.930 ; free physical = 24458 ; free virtual = 70407
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:28]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7183.824 ; gain = 513.191 ; free physical = 23982 ; free virtual = 69910
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/vlsi1_010hs23/ex1/.Xil/Vivado-830-tardis-a02/dcp3/zybo_top.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:28]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex1/.Xil/Vivado-830-tardis-a02/dcp3/zybo_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7216.277 ; gain = 0.000 ; free physical = 23772 ; free virtual = 69702
+Restored from archive | CPU: 0.020000 secs | Memory: 0.781319 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7216.277 ; gain = 0.000 ; free physical = 23772 ; free virtual = 69702
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'clk_i'; it is not accessible from the fabric routing.
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 7274.242 ; gain = 0.000 ; free physical = 23698 ; free virtual = 69626
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:18]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:28]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern '*' matched to 'clock' objects. [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [/home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.67 . Memory (MB): peak = 7444.262 ; gain = 0.000 ; free physical = 23582 ; free virtual = 69510
+current_design impl_1
+close_design
+close_design
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 19:20:33 2024...

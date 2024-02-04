@@ -1,0 +1,4 @@
+// The following should be pad power and ground 
+//  regardless of whether or not they are extended or standard power
+LAYOUT TEXT VDDIO 88.8 42 107
+LAYOUT TEXT VSSIO 88.8 12 107

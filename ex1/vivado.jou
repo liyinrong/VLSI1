@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Jan 24 17:42:08 2024
+# Process ID: 830
+# Current directory: /home/vlsi1_010hs23/ex1
+# Command line: vivado
+# Log file: /home/vlsi1_010hs23/ex1/vivado.log
+# Journal file: /home/vlsi1_010hs23/ex1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project intro /home/vlsi1_010hs23/ex1/intro/vivado -part xc7z020clg400-1
+set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
+add_files -scan_for_includes {/home/vlsi1_010hs23/ex1/intro/sourcecode/zybo_top.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/debouncer.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/led_toggler.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/rising_edge_pulser.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/led_switcher.sv /home/vlsi1_010hs23/ex1/intro/sourcecode/rst_gen.sv}
+add_files -fileset constrs_1 -norecurse /home/vlsi1_010hs23/ex1/intro/vivado/constraints/zybo-z7.xdc
+update_compile_order -fileset sources_1
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+set_property strategy Flow_RuntimeOptimized [get_runs impl_1]
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+close_design
+open_run impl_1
+report_utilization -name utilization_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+current_design impl_1
+close_design
+close_design
+close_project

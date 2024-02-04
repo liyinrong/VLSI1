@@ -1,0 +1,26 @@
+###############################################################
+#
+# Version 1.1
+#
+
+set defHierChar {/}
+set init_verilog {../synopsys/netlists/top.v src/chip.v}
+set init_design_settop 0
+
+set init_io_file  {src/chip.io}
+
+set init_lef_file {tech/lef/u65ll_8m1t0f1u.lef tech/lef/uk65lscllmvbbl.lef tech/lef/u065gioll25mvir_8m1t0f1u.lef}
+
+set init_import_mode {-treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1 }
+
+set init_mmmc_file {./src/mmmc.view.tcl}
+
+set init_pwr_net {VDD VDDIO}
+set init_gnd_net {VSS VSSIO}
+
+# delaycal_use_default_delay_limit 1000
+#
+# Net default delay values are:
+#   Net delay: 1 ns
+#   Transition time: 0 ps
+#   Net load: 0.5 pF
